@@ -1,0 +1,58 @@
+/* Base layout styles */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 1s ease;
+}
+
+/* Header styles */
+.layout__header {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 1s ease; 
+}
+
+/* Footer styles */
+.layout__footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    transition: background-color 1s ease; 
+}
+
+/* Main content styles */
+.layout__main {
+    flex: 1;
+    transition: background-color 1s ease; 
+}
+
+/* Background and header/footer colors based on variant */
+.layout--variant1 .layout__main {
+    background-color: lightcyan; /* Light blue background */
+}
+
+.layout--variant1 .layout__header,
+.layout--variant1 .layout__footer {
+    background-color: lightsteelblue; /* Lighter blue header/footer */
+}
+
+.layout--variant2 .layout__main {
+    background-color: lightcoral; /* Blanched almond background */
+}
+
+.layout--variant2 .layout__header,
+.layout--variant2 .layout__footer {
+    background-color: lightsalmon; /* Light goldenrod yellow header/footer */
+}
+
+.layout--variant3 .layout__main {
+    background-color: gray; /* Light red background */
+    color: white;
+}
+
+.layout--variant3 .layout__header,
+.layout--variant3 .layout__footer {
+    background-color: black; /* Light coral header/footer */
+    color: white;
+}
