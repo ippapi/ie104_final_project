@@ -35,28 +35,34 @@
 
 /* Background and header/footer colors based on variant */
 .layout--variant1 .layout__main {
-    background-color:#dad7cd; /* Light blue background */
+    background-color:#F5FAF3; /* Light blue background */
+    color: #2F4F4F;
 }
 
 .layout--variant1 .layout__header,
 .layout--variant1 .layout__footer {
-    background-color: #a3b18a; /* Lighter blue header/footer */
+    background-color: #B5D3C3; /* Lighter blue header/footer */
+    color: #2F4F4F;
 }
 
 .layout--variant2 .layout__main {
-    background-color: #a3b18a; /* Blanched almond background */
+    background-color: #F7F7F7; /* Blanched almond background */
+    color: #333333;
 }
 
 .layout--variant2 .layout__header,
 .layout--variant2 .layout__footer {
-    background-color:#588157;
+    background-color:#CCCCCC;
+    color: #333333;
 }
 
 .layout--variant3 .layout__main {
-    background-color:#588157; /* Light red background */
+    background-color:#333333; /* Light red background */
+    color: #F5F5F5;
 }
 
 .layout--variant3 .layout__header,
 .layout--variant3 .layout__footer {
-    background-color: #3a5a40; /* Light coral header/footer */
+    background-color: #1A1A1A; /* Light coral header/footer */
+    color: #F5F5F5;
 }
