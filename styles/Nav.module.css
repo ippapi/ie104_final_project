@@ -1,0 +1,21 @@
+/* styles/Nav.module.css */
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__section__title{
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 200px;
+}
+
+.nav__section__submenu {
+    width: 200px;
+    display: none; /* Hide the submenu by default */
+    position: absolute; /* Position it absolutely under the section */
+}
+
+.nav__section:hover .nav__section__submenu {
+    display: flex;
+    flex-direction: column;
+}

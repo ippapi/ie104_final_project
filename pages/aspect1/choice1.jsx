@@ -6,8 +6,8 @@ export default function BlogPost() {
 
   return (
     <div>
-      <h1>Blog Post {id}</h1>
-      <p>This is blog post #{id}.</p>
+      <h1>Choice_1{id}</h1>
+      <p>Choide{1}.</p>
     </div>
   );
 }

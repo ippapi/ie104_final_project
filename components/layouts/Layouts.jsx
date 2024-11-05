@@ -1,9 +1,9 @@
-import styles from '../../styles/Layout.module.css'
+import styles from '@/styles/Layout.module.css'
 
 import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import { useLayout } from '../../context/LayoutContext'
+import Navbar from '@/components/layouts/Navbar';
+import Footer from '@/components/layouts/Footer';
+import { useLayout } from '@/context/LayoutContext'
 
 const Layout = ({ children }) => {
   const { variant } = useLayout();
