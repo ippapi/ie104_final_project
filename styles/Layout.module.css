@@ -22,6 +22,9 @@
     text-align: center;
     margin-top: auto;
     transition: background-color 1s ease; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Main content styles */
@@ -32,30 +35,28 @@
 
 /* Background and header/footer colors based on variant */
 .layout--variant1 .layout__main {
-    background-color: lightcyan; /* Light blue background */
+    background-color:#dad7cd; /* Light blue background */
 }
 
 .layout--variant1 .layout__header,
 .layout--variant1 .layout__footer {
-    background-color: lightsteelblue; /* Lighter blue header/footer */
+    background-color: #a3b18a; /* Lighter blue header/footer */
 }
 
 .layout--variant2 .layout__main {
-    background-color: lightcoral; /* Blanched almond background */
+    background-color: #a3b18a; /* Blanched almond background */
 }
 
 .layout--variant2 .layout__header,
 .layout--variant2 .layout__footer {
-    background-color: lightsalmon; /* Light goldenrod yellow header/footer */
+    background-color:#588157;
 }
 
 .layout--variant3 .layout__main {
-    background-color: gray; /* Light red background */
-    color: white;
+    background-color:#588157; /* Light red background */
 }
 
 .layout--variant3 .layout__header,
 .layout--variant3 .layout__footer {
-    background-color: black; /* Light coral header/footer */
-    color: white;
+    background-color: #3a5a40; /* Light coral header/footer */
 }
