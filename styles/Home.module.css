@@ -1,0 +1,103 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* General Home Layout */
+.home {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+.home__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__maincontent {
+  flex: 1;
+  max-width: 50%;
+}
+
+.home__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.home__content {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.home__button {
+  background-color: #007BFF;
+  width: 200px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home__button:hover {
+  background-color: #0056b3;
+}
+
+/* Variant 1 Styles */
+.title--variant1,
+.content--variant1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title--variant1 {
+  color: #2F4F4F;
+}
+
+.content--variant1 {
+  color: #555;
+}
+
+.home__button--variant1 {
+  background-color: #4CAF50;
+}
+
+/* Variant 2 Styles */
+.title--variant2,
+.content--variant2 {
+  font-family: 'Lora', serif;
+}
+
+.title--variant2 {
+  color: #333;
+}
+
+.content--variant2 {
+  color: #444;
+}
+
+.home__button--variant2 {
+  background-color: #FF5722;
+}
+
+/* Variant 3 Styles */
+.title--variant3,
+.content--variant3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title--variant3 {
+  color: #F5F5F5;
+}
+
+.content--variant3 {
+  color: #BBBBBB;
+}
+
+.home__button--variant3 {
+  background-color: #9C27B0;
+}
