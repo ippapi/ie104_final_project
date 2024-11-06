@@ -1,43 +1,50 @@
-import React from "react";
-import NavbarSection from "./NavbarSection";
-import styles from '@/styles/Nav.module.css';
+import React from 'react';
+import Link from 'next/link';
+import styles from '@/styles/Layout.module.css';
 
-const NavData = [
-    {
-        section_id: 'nav_section_1',
-        section_name: 'Aspect 1',
-        choices: [
-            {id: 'nav_choice_11', name: 'choice_1', link: '/aspect1/choice1'}, 
-            {id: 'nav_choice_12', name: 'choice_2', link: '/aspect1/choice2'}, 
-            {id: 'nav_choice_13', name: 'choice_3', link: '/aspect1/choice3'}, 
-        ]
-    }, 
-    {
-        section_id: 'nav_section_2',
-        section_name: 'Aspect 2',
-        choices: [
-            {id: 'nav_choice_21', name: 'choice_1', link: '/aspect2/choice1'}, 
-            {id: 'nav_choice_22', name: 'choice_2', link: '/aspect2/choice2'}, 
-            {id: 'nav_choice_23', name: 'choice_3', link: '/aspect2/choice3'}, 
-        ]
-    },
-    {
-        section_id: 'nav_section_3',
-        section_name: 'Aspect 3',
-        choices: [
-            {id: 'nav_choice_31', name: 'choice_1', link: '/aspect3/choice1'}, 
-            {id: 'nav_choice_32', name: 'choice_2', link: '/aspect3/choice2'}, 
-            {id: 'nav_choice_33', name: 'choice_3', link: '/aspect3/choice3'}, 
-        ]
-    }
-]
-
-const Navbar = () => {
-    return (<nav className={styles.nav}>
-        {NavData.map((section) => {
-            return <NavbarSection key={section.section_id} title={section.section_name} choices={section.choices}/>
-        })}
-    </nav>)
+const Nav = ({ variant }) => {
+    return (
+        <header className={`${styles.layout__header} ${styles[`layout--${variant}`]}`}>
+            <nav className={styles.nav__container}>
+                <NavLogo variant={variant} />
+                <NavMenu variant={variant} />
+            </nav>
+        </header>
+    );
 };
 
-export default Navbar;
+const NavMenu = ({ variant }) => {
+    const menuItems = [
+        { path: '/about', label: 'About' },
+        { path: '/works', label: 'Works' },
+        { path: '/contact', label: 'Contact' },
+    ];
+
+    return (
+        <ul className={styles.nav__menu}>
+            {menuItems.map((item) => (
+                <NavItem key={item.path} path={item.path} label={item.label} variant={variant} />
+            ))}
+        </ul>
+    );
+};
+
+const NavLogo = ({ variant }) => {
+    return (
+        <Link href="/" className={`${styles.nav__logo} ${styles[`layout--${variant}`]}`}>
+            MyPortfolio
+        </Link>
+    );
+};
+
+const NavItem = ({ variant, path, label }) => {
+    return (
+        <li className={styles.nav__item}>
+            <Link href={path} className={`${styles.nav__link} ${styles[`layout--${variant}`]}`}>
+                {label}
+            </Link>
+        </li>
+    );
+};
+
+export default Nav;

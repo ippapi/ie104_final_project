@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
     return (<>
-        zzz
+        Lmao, không có gì ở đây cả
     </>)
 };
 

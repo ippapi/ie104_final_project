@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   return (
     <div className = {layoutClass}>
       <header className = { styles.layout__header }>
-        <Navbar />
+        <Navbar variant={variant}/>
       </header>
 
       <main className = { styles.layout__main }>
