@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLayout } from '@/context/LayoutContext';
+import HomeContent from '@/components/index/HomeContent';
 import styles from '@/styles/Home.module.css';
 
 const variant_content = {
@@ -18,22 +19,14 @@ const variant_content = {
     main_content: 'My favourite one',
     button_content: "Let's rock!",
   }
-}
+};
 
 const Home = () => {
   const { variant } = useLayout();
-  const content = variant_content[variant];
 
   return (
     <div className={styles.home}>
-      <div className={styles.home__content}>
-        <h1 className={`${styles.home__title} ${styles[`title--${variant}`]}`}>{content.title}</h1>
-        <p className={`${styles.home__maincontent} ${styles[`content--${variant}`]}`}>{content.main_content}</p>
-        <button className={`${styles.home__button} ${styles[`content--${variant}`]}`}>{content.button_content}</button>
-      </div>
-      <div className={styles.home_img}>
-        <p>img ở đây</p>
-      </div>
+      <HomeContent variant={variant} variant_content={variant_content[variant]} />
     </div>
   );
 }
