@@ -1,12 +1,32 @@
 import React from 'react';
 import styles from '@/styles/Home.module.css';
 
-const HomeContent = ({ variant, variant_content }) => {
+const variant_content = {
+  variant1: {
+    title: 'This is where we work together',
+    main_content: 'They called this is my first life, but never it does. And they love it!',
+    button_content: "Let's cooperate!",
+  },
+  variant2: {
+    title: 'This is where we look into our soul',
+    main_content: "I don't like small talk, only 心灵相通",
+    button_content: "Let's talk!",
+  },
+  variant3: {
+    title: 'The hidden one',
+    main_content: 'My favourite one',
+    button_content: "Let's rock!",
+  }
+};
+
+const HomeContent = ({ variant }) => {
+  const content = variant_content[variant]
+
   return (
     <div className={styles.home__content}>
-      <h1 className={`${styles.home__title} ${styles[`title--${variant}`]}`}>{variant_content.title}</h1>
-      <p className={`${styles.home__maincontent} ${styles[`content--${variant}`]}`}>{variant_content.main_content}</p>
-      <button className={`${styles.home__button} ${styles[`button--${variant}`]}`}>{variant_content.button_content}</button>
+      <h1 className={`${styles.home__title} ${styles[`title--${variant}`]}`}>{content.title}</h1>
+      <p className={`${styles.home__maincontent} ${styles[`content--${variant}`]}`}>{content.main_content}</p>
+      <button className={`${styles.home__button} ${styles[`button--${variant}`]}`}>{content.button_content}</button>
     </div>
   );
 };
