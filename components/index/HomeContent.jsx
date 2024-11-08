@@ -3,18 +3,18 @@ import styles from '@/styles/Home.module.css';
 
 const variant_content = {
   variant1: {
-    title: 'This is where we work together',
-    main_content: 'They called this is my first life, but never it does. And they love it!',
+    title: 'Version 1: Work only',
+    main_content: '100% focus, 100% locked in',
     button_content: "Let's cooperate!",
   },
   variant2: {
-    title: 'This is where we look into our soul',
-    main_content: "I don't like small talk, only 心灵相通",
-    button_content: "Let's talk!",
+    title: 'Version 2: Silence section',
+    main_content: "I don't like small talk!",
+    button_content: "Let's vibe!",
   },
   variant3: {
-    title: 'The hidden one',
-    main_content: 'My favourite one',
+    title: 'Version 3: Hidden one',
+    main_content: 'I do hide world from this!',
     button_content: "Let's rock!",
   }
 };
