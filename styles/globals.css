@@ -1,3 +1,11 @@
+:root {
+    --hover-color: #ee154b;
+    --text-color: #333;
+    --white-color: #fff;
+    --hover-background: #f1f1f1;
+}
+  
+
 * {
     margin: 0;
     padding: 0;

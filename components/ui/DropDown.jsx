@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "@/styles/DropDown.module.css";
+import styles from "@/styles/Ui.module.css";
 
-const Dropdown = ({ options, onSelect, label }) => {
+const Dropdown = ({ options, label }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openDropDown = () => {
@@ -13,14 +13,14 @@ const Dropdown = ({ options, onSelect, label }) => {
   };
 
   return (
-    <div className={styles.dropDown} onMouseEnter={openDropDown} onMouseLeave={closeDropDown}>
-      <span className={styles.dropDown__label}>{label}</span>
+    <div className={styles['dropdown']} onMouseEnter={openDropDown} onMouseLeave={closeDropDown}>
+      <span className={styles['dropdown__label']}>{label}</span>
       {isOpen && (
-        <div className={styles.dropDown__drawer}>
+        <div className={styles['dropdown__drawer']}>
           {options.map((option) => (
-            <div className={styles.dropDown__item} onClick={() => onSelect(option)}>
-              {option}
-            </div>
+            <a href={option.link} className={styles['dropdown__item']}>
+              {option.name}
+            </a>
           ))}
         </div>
       )}

@@ -7,7 +7,7 @@ import Footer from '@/components/layouts/Footer';
 const Layout = ({ children }) => {
   return (
     <div>
-      <header className = { styles['layout__header'] }>
+      <header className={styles['layout__header']}>
         <Header />
       </header>
 

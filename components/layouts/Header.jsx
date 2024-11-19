@@ -1,24 +1,47 @@
-import React, { useState } from "react";
-import styles from "@/styles/Layout.module.css";
+import React from "react";
+import styles from "@/styles/Layout.module.css"
 import Dropdown from "@/components/ui/DropDown";
 
 const Header = () => {
-  const [language, setLanguage] = useState("VI");
+  const menuItems = [
+    {
+      label: "Courses",
+      dropdown: [
+        { name: "Tiếng anh cho trẻ 1-2 tuổi", link: "/courses/1-2" },
+        { name: "Tiếng anh cho trẻ 3-8 tuổi", link: "/courses/3-8" },
+        { name: "Tiếng anh cho trẻ 9-12 tuổi", link: "/courses/9-12" },
+        { name: "Tiếng anh cho trẻ 13-18 tuổi", link: "/courses/13-18" },
+      ],
+    },
+    {
+      label: "Giới thiệu",
+      dropdown: [
+        { name: "Sứ mệnh", link: "/about/story" },
+        { name: "Đội ngũ", link: "/about/team" },
+        { name: "Hành trình", link: "/about/careers" },
+      ],
+    },
+    { label: "Liên hệ", link: "/contact" },
+    { label: "Blog", link: "/blog" },
+  ];
 
-  const changeLanguage = (language) => {
-    setLanguage(language);
-  };
+  return (<>
+      <a href="/" className={styles['layout__header-logo']}> 
+        Kids&Us
+      </a>
 
-  const languageOptions = ["VI", "EN"];
-
-  return (
-    <>
-      <span className={styles['layout__header-phoneNumber']}>1800 6175</span>
-      <div className={styles['layout__header-dropdown']}>
-        <Dropdown label={language} options={languageOptions} onSelect={changeLanguage}/>
+      <div className={styles['layout__header-menu']}>
+        {menuItems.map((item) =>
+          item.dropdown ? (
+            <Dropdown options={item.dropdown} label={item.label} />
+          ) : (
+            <a href={item.link} className={styles['layout__header-link']}>
+              {item.label}
+            </a>
+          )
+        )}
       </div>
-    </>
-  );
+    </>);
 };
 
 export default Header;

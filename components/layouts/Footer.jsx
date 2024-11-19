@@ -6,10 +6,12 @@ const Footer = () => {
     <footer className={styles['layout__footer']}>
         <div className={styles['layout__footer-section']}>
             <p className={styles['layout__footer-title']}>CÁC KHOÁ HỌC</p>
-            <p>Khóa học tiếng Anh cho trẻ 1-2 tuổi</p>
-            <p>Khóa học tiếng Anh cho trẻ 3-8 tuổi</p>
-            <p>Khóa học tiếng Anh cho trẻ 9-12 tuổi</p>
-            <p>Khóa học tiếng Anh cho trẻ 13-18 tuổi</p>
+            <div className={styles['layout__footer-linkcontainer']}>
+                <a href="/courses/1-2" className={styles['layout__footer-link']}>Khóa học tiếng Anh cho trẻ 1-2 tuổi</a>
+                <a href="/courses/3-8" className={styles['layout__footer-link']}>Khóa học tiếng Anh cho trẻ 3-8 tuổi</a>
+                <a href="/courses/9-12" className={styles['layout__footer-link']}>Khóa học tiếng Anh cho trẻ 9-12 tuổi</a>
+                <a href="/courses/13-18" className={styles['layout__footer-link']}>Khóa học tiếng Anh cho trẻ 13-18 tuổi</a>
+            </div>
         </div>
 
         <div className={styles['layout__footer-section']}>

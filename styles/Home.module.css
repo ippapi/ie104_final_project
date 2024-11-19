@@ -1,95 +1,65 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+.main {
+  padding: 20px;
 }
 
-.home__content {
+.hero {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
-.home__title {
-  font-size: 3rem;
-  font-weight: bold;
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
 }
 
-.home__maincontent {
-  font-size: 1.25rem;
-  margin: 1rem 0;
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
-.home__button {
-  padding: 0.75rem 1.5rem;
-  background-color: #ff7e5f;
-  color: white;
+.hero .ctaButton {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
-.home__button:hover {
-  background-color: #ff5722; /* Darker shade for hover effect */
-  transform: scale(1.05); /* Slightly grow the button */
+.courses {
+  margin: 40px 0;
 }
 
-.home_img {
-  margin-top: 2rem;
-  background-color: #f4f4f9;
-  padding: 2rem;
-  width: 100%;
+.courses h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.courseList {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+}
+
+.about,
+.testimonials,
+.contact {
+  margin: 40px 0;
   text-align: center;
 }
 
-.title--variant1 {
-  color: #ff7e5f;
+.about h2,
+.testimonials h2,
+.contact h2 {
+  color: var(--primary-color);
 }
-
-.content--variant1 {
-  color: #333;
-}
-
-.button--variant1 {
-  background-color: #ff7e5f;
-}
-
-.button--variant1:hover {
-  background-color: #ff5722; /* Darker shade for hover effect */
-}
-
-.title--variant2 {
-  color: #feb47b;
-}
-
-.content--variant2 {
-  color: #666;
-}
-
-.button--variant2 {
-  background-color: #feb47b;
-}
-
-.button--variant2:hover {
-  background-color: #f79c42; /* Darker shade for hover effect */
-}
-
-.title--variant3 {
-  color: #00bcd4;
-}
-
-.content--variant3 {
-  color: white;
-}
-
-.button--variant3 {
-  background-color: #00bcd4;
-}
-
-.button--variant3:hover {
-  background-color: #008ba3; /* Darker shade for hover effect */
-}
-
