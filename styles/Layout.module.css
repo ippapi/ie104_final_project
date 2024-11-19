@@ -1,106 +1,29 @@
-.layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: background-color 1s ease;
-}
-
-/* Header styles */
 .layout__header {
-    padding: 10px;
-    text-align: center;
-    transition: background-color 1s ease; 
-    position: sticky;
-    top: 0;
-}
-
-.layout__footer {
-    padding: 10px;
-    text-align: center;
-    transition: background-color 1s ease; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 20px;
+    background: #ee154b;
 }
 
 .layout__main {
-    flex: 1;
-    transition: background-color 1s ease; 
+    padding: 20px;
 }
 
-.nav__container {
+.layout__footer {
+    background-color: #1d1f21;
+    color: #fff;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+.layout__footer-section {
+    margin-right: 50px;
 }
 
-.nav__menu {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
+.layout__footer-title {
+    color: #ffb700;
+    margin-bottom: 10px;
 }
-
-.nav__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav__link{
-    text-decoration: none;
-}
-
-.layout__header .nav__logo,
-.layout__header .nav__link {
-    transition: color 1s ease;
-}
-
-.layout--variant1 .layout__main {
-    background-color:#F5FAF3;
-}
-
-.layout--variant2 .layout__main {
-    background-color: #F7F7F7;
-}
-
-.layout--variant3 .layout__main {
-    background-color:#333333;
-}
-
-.layout--variant1 .layout__header,
-.layout--variant1 .layout__footer {
-    background-color: #B5D3C3;
-}
-
-.layout--variant2 .layout__header,
-.layout--variant2 .layout__footer {
-    background-color:#CCCCCC;
-}
-
-.layout--variant3 .layout__header,
-.layout--variant3 .layout__footer {
-    background-color: #1A1A1A;
-}
-
-.layout--variant1 .layout__main,
-.layout--variant1 .layout__footer,
-.layout--variant1 .layout__header,
-.layout--variant1 .layout__header .nav__logo,
-.layout--variant1 .layout__header .nav__link {
-    color: #2F4F4F;
-}
-
-.layout--variant2 .layout__main,
-.layout--variant2 .layout__footer,
-.layout--variant2 .layout__header,
-.layout--variant2 .layout__header .nav__logo,
-.layout--variant2 .layout__header .nav__link {
-    color: #333333;
-}
-
-.layout--variant3 .layout__main,
-.layout--variant3 .layout__footer,
-.layout--variant3 .layout__header,
-.layout--variant3 .layout__header .nav__logo,
-.layout--variant3 .layout__header .nav__link {
-    color: #F5F5F5;
-}
-

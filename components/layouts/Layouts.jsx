@@ -1,25 +1,21 @@
 import styles from '@/styles/Layout.module.css'
 
 import React from 'react';
-import Navbar from '@/components/layouts/Navbar';
+import Header from '@/components/layouts/Header';
 import Footer from '@/components/layouts/Footer';
-import { useLayout } from '@/context/LayoutContext'
 
 const Layout = ({ children }) => {
-  const { variant } = useLayout();
-  const layoutClass = `${styles.layout} ${styles[`layout--${variant}`]}`;
-  
   return (
-    <div className = {layoutClass}>
-      <header className = { styles.layout__header }>
-        <Navbar variant={variant}/>
+    <div>
+      <header className = { styles['layout__header'] }>
+        <Header />
       </header>
 
-      <main className = { styles.layout__main }>
+      <main className = { styles['layout__main'] }>
         { children } 
       </main>
 
-      <footer className = { styles.layout__footer }>
+      <footer className = { styles['layout__footer']}>
         <Footer />
       </footer>
     </div>
