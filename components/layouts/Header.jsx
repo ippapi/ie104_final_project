@@ -40,6 +40,8 @@ const Header = () => {
             </a>
           )
         )}
+
+<a href="/dang-ky" className={styles['layout__header-button']}>Đăng Ký</a>
       </div>
     </>);
 };

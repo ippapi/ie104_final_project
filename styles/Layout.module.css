@@ -23,6 +23,7 @@
 }
   
 .layout__header-link {
+    padding: 10px 10px;
     text-decoration: none;
     color: var(--text-color);
 }
@@ -30,9 +31,25 @@
 .layout__header-link:hover {
     color: var(--hover-color);
 }
+
+.layout__header-button {
+    padding: 10px 10px;
+    background-color: lightcoral;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.layout__header-button:hover{
+    background-color: var(--hover-color);
+} 
   
 .layout__main {
-    padding: 20px;
+    background-color: var(--white-color);
 }
 
 .layout__footer {
