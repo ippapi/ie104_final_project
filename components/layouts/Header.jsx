@@ -5,7 +5,11 @@ import Dropdown from "@/components/ui/DropDown";
 const Header = () => {
   const menuItems = [
     {
-      label: "Courses",
+      label: "Trang chủ",
+      link: "/",
+    },
+    {
+      label: "Các khóa học",
       dropdown: [
         { name: "Tiếng anh cho trẻ 1-2 tuổi", link: "/courses/1-2" },
         { name: "Tiếng anh cho trẻ 3-8 tuổi", link: "/courses/3-8" },
@@ -14,15 +18,20 @@ const Header = () => {
       ],
     },
     {
-      label: "Giới thiệu",
+      label: "Phương pháp của chúng tôi",
+      link: "/method"
+    },
+    {
+      label: "Cơ sở",
+      link: "/base"
+    },
+    {
+      label: "Các hoạt động",
       dropdown: [
-        { name: "Sứ mệnh", link: "/about/story" },
-        { name: "Đội ngũ", link: "/about/team" },
-        { name: "Hành trình", link: "/about/careers" },
+        { name: "Các hoạt động bằng tiếng anh", link: "/activity/en" },
+        { name: "Hội hè fun week", link: "/activity/fw" },
       ],
     },
-    { label: "Liên hệ", link: "/contact" },
-    { label: "Blog", link: "/blog" },
   ];
 
   return (<>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Ui.module.css';
+import styles from '@/styles/UI/CardContent.module.css'
 import EffectImg from '@/components/ui/EffectImg';
 
 const CardContent = ({ src, title, content, cardWidth = '400px', cardHeight = '200px', img_pos = 'left', background = "linear-gradient(to right, #ff7e5f, #feb47b)", href = '/'}) => {

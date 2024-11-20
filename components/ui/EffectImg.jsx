@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Ui.module.css';
+import styles from '@/styles/UI/EffectImage.module.css';
 
 const EffectImg = ({ src, effect = 'zoom', width = 'auto', height = 'auto'}) => {
   return (

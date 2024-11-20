@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "@/styles/Ui.module.css";
+import styles from "@/styles/UI/DropDown.module.css";
 
 const Dropdown = ({ options, label }) => {
   const [isOpen, setIsOpen] = useState(false);

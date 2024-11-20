@@ -80,6 +80,16 @@ const Main = () => {
                     />
                 ))}
             </div>
+            <section className={styles['home__content-about']}>
+                <div className={styles['home__content-about__content']}>
+                    <h2 className={styles['home__title']}>Phương pháp học tiếng Anh</h2>
+                    <p className={styles['home__content-about__description']}>
+                        Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.
+                    </p>
+                    <EffectImg src={'/kid.png'}/>
+                    <GridContent content={statis_content} />
+                </div>
+            </section>
         </>
     );
 };
