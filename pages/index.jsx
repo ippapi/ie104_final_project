@@ -4,10 +4,14 @@ import Slideshow from '@/components/ui/SlideShow';
 import GridContent from '@/components/ui/GridContent';
 import EffectImg from '@/components/ui/EffectImg';
 import CardContent from '@/components/ui/CardContent';
+import RegistrationForm from '@/components/ui/RegisForm';
+import HelpButton from '@/components/ui/HelpButton';
 
-const slide_images = [
+const big_slide_images = [
     "/slides/slide_1.png",
     "/slides/slide_2.png",
+    "/slides/slide_3.png",
+    "/slides/slide_4.png",
 ]
 
 const statis_content = [
@@ -52,21 +56,42 @@ const promo_content = [
     },
 ]
 
+const slide_images = [
+    "/kid_5.jpg",
+    "/kid_6.jpg",
+]
+
+const method_content = [
+    { title: 'Nghe', content: 'Nghe là bước đầu tiên mà trẻ làm quen với tiếng mẹ đẻ '},
+    { title: 'Hiểu', content: 'Thông qua nghe, trẻ dần hiểu được những từ đầu tiên'},
+    { title: 'Nói', content: 'Sau khi nghe và hiểu tiếng mẹ đẻ, trẻ bắt đầu tập nói'},
+    { title: 'Đọc', content: 'Đọc là giai đoạn tiếp theo trong quá trình học ngôn ngữ'},
+    { title: 'Viết', content: 'Cuối cùng, trẻ hoàn thiện kỹ năng ngôn ngữ bằng việc tập viết'}
+];
+
+const activity_tags = [
+    { title: "Story", description: "Time" },
+    { title: "Little", description: "Chef" },
+    { title: "Art", description: "Craft" },
+];
+
+const method_title_color = [ '#f6d367', '#feacb', '#74bebe', '#fe699f', '#2b2b2b' ]
+
 const Main = () => {
     return (
         <>
-            <Slideshow images={slide_images} interval={5000} />
-            <section className={styles['home__content-about']}>
-                <div className={styles['home__content-about__content']}>
-                    <h2 className={styles['home__title']}>Chúng tôi là Kids&Us</h2>
-                    <p className={styles['home__content-about__description']}>
+            <Slideshow images={big_slide_images} interval={5000} />
+            <section className={styles['home__about']}>
+                <div className={styles['home__about-content']}>
+                    <h2 className={styles['home__about-title']}>Chúng tôi là Kids&Us</h2>
+                    <p className={styles['home__about-description']}>
                         Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.
                     </p>
                     <EffectImg src={'/kid.png'}/>
                     <GridContent content={statis_content} />
                 </div>
             </section>
-            <div className={styles['home__content-promo']}>
+            <div className={styles['home__promo']}>
                 {promo_content.map((card, index) => (
                     <CardContent
                     key={index}
@@ -80,16 +105,50 @@ const Main = () => {
                     />
                 ))}
             </div>
-            <section className={styles['home__content-about']}>
-                <div className={styles['home__content-about__content']}>
-                    <h2 className={styles['home__title']}>Phương pháp học tiếng Anh</h2>
-                    <p className={styles['home__content-about__description']}>
+            <section className={styles['home__method']}>
+                <div className={styles['home__method-content']}>
+                    <h2 className={styles['home__method-title']}>Phương pháp học tiếng Anh</h2>
+                    <p className={styles['home__method-description']}>
                         Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.
                     </p>
-                    <EffectImg src={'/kid.png'}/>
-                    <GridContent content={statis_content} />
+                    <div className={styles['home__method-gridcontent']}>
+                        <Slideshow images={slide_images} width='600px' height='600px'/>
+                        <GridContent content={method_content} layout='column' colors={method_title_color} align_pos='left'/>
+                    </div>
                 </div>
             </section>
+            <section className={styles["home__activity"]}>
+                <div className={styles["home__activity-container"]}>
+                    <div className={styles["home__activity-content"]}>
+                        <h2 className={styles["home__activity-title"]}>
+                            Các hoạt động bằng tiếng Anh
+                        </h2>
+                        <p className={styles["home__activity-description"]}>
+                            Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.
+                        </p>
+                        <a href='/activity/en' className={styles["home__activity-button"]}>Xem các hoạt động</a>
+                    </div>
+
+                    <div className={styles["home__activity-image"]}>
+                        <img src='/kid_activity.jpg' className={styles["home__activity-img"]} />
+                        <div className={styles["home__activity-tags"]}>
+                            {activity_tags.map((tag, index) => (
+                            <div key={index} className={styles["home__activity-tag"]}>
+                                <span className={styles["home__activity-tag-title"]}>{tag.title}</span>
+                                <br></br>
+                                <span className={styles["home__activity-tag-description"]}>{tag.description}</span>
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <RegistrationForm backgroundColor="#E3F2FD" /> 
+            </section>
+
+            <HelpButton />
         </>
     );
 };

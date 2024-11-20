@@ -36,7 +36,7 @@ const Header = () => {
 
   return (<>
       <a href="/" className={styles['layout__header-logo']}> 
-        Kids&Us
+        <img src="/logo.png"   style={{height: '60px'}} />
       </a>
 
       <div className={styles['layout__header-menu']}>

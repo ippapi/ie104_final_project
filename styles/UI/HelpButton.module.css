@@ -1,0 +1,78 @@
+/* Block: help-button */
+.help-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 10px;
+  background-color: #fe699f;
+  color: var(--white-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.helpButton__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.help-button:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+.helpButton__close {
+  background: none;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.help-button__popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 400px;
+  background-color: var(--white-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.help-button__label {
+  display: block;
+  color: var(--text-color);
+}
+
+.help-button__submit {
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #fe699f;
+}
+
+.help-button__submit:hover {
+  background-color: #e24c8d;
+}
+
+/* Element: Close Button (help-button__close) */
+.help-button__close {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.help-button__close:hover {
+  background-color: #bbb;
+}

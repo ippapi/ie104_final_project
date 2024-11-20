@@ -5,6 +5,15 @@ const Footer = () => {
   return (
     <footer className={styles['layout__footer']}>
         <div className={styles['layout__footer-section']}>
+            <p className={styles['layout__footer-title']}>KID&US VIETNAM</p>
+            <div className={styles['layout__footer-linkcontainer']}>
+                <a className={styles['layout__footer-link']}>General Terms & Condition</a>
+                <a className={styles['layout__footer-link']}>Rules & Regulations</a>
+                <a className={styles['layout__footer-link']}>Privacy Policy</a>
+                <a className={styles['layout__footer-link']}>Licenses</a>
+            </div>
+        </div>
+        <div className={styles['layout__footer-section']}>
             <p className={styles['layout__footer-title']}>CÁC KHOÁ HỌC</p>
             <div className={styles['layout__footer-linkcontainer']}>
                 <a href="/courses/1-2" className={styles['layout__footer-link']}>Khóa học tiếng Anh cho trẻ 1-2 tuổi</a>

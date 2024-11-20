@@ -5,13 +5,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 0px 10px;
     border: 1px solid lightgrey;
     background-color: var(--white-color);
+    color: var(--text-color);
   }
   
 .layout__header-logo{
-    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: var(--hover-color);
@@ -36,7 +36,6 @@
     padding: 10px 10px;
     background-color: var(--constract-color);
     color: var(--text-color);
-    font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -50,6 +49,7 @@
   
 .layout__main {
     background-color: var(--white-color);
+    min-height: 100vh;
 }
 
 .layout__footer {
