@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/UI/SlideShow.module.css";
 
-const Slideshow = ({ images, interval = 5000, width = '100%', height = '600px' }) => {
+const Slideshow = ({ images, interval = 5000, style={width: '100%', height: '600px'}}) => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const Slideshow = ({ images, interval = 5000, width = '100%', height = '600px' }
     };
 
     return (
-        <div className={styles['slideshow']} style={{ width, height }}>
+        <div className={styles['slideshow']} style={{ width: style.width, height: style.height }}>
         <div
             className={styles['slideshow__inner']}
             style={{transform: `translateX(-${slideIndex * 100}%)`}}

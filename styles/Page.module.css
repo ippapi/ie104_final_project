@@ -1,31 +1,53 @@
-.home__about {
+.page__about {
     padding: 20px 20px;
     text-align: center;
 }
 
-.home__about-content {
+.page__about-content {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.home__about-title {
+.page__about-title {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-top: 50px;
     color: var(--hover-color);
-    margin-bottom: 20px;
 }
 
-.home__about-description {
-    max-width: 1200px;
+.page__about-description {
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     color: var(--text-color);
 }
 
-.home__promo{
+.page__about-grid{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+}
+
+.page__about__gird-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page__about__grid__item-title{
+    font-size: 1.5rem;
+    color: var(--hover-color);
+}
+
+.page__about__grid__item-content{
+    color: var(--text-color);
+}
+
+.page__promo-grid{
     padding-left: 0;
     padding-right: 0;
     display: grid;
@@ -34,26 +56,49 @@
     color: var(--white-color);
 }
 
-.home__method {
+.page__promo-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__promo__block-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff0f1;
+}
+
+.page__promo__block-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #73cfe4;
+}
+
+.page__method {
     padding: 20px 20px;
     text-align: center;
     background-color: #fef4fd;
 }
 
-.home__method-content {
+.page__method-content {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.home__method-title {
+.page__method-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--hover-color);
     margin-bottom: 20px;
 }
 
-.home__method-description {
+.page__method-description {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -62,43 +107,43 @@
     color: var(--text-color);
 }
 
-.home__method-gridcontent { 
+.page__method-gridcontent { 
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.home__activity {
+.page__activity {
     display: flex;
     justify-content: center;
     padding: 20px 20px;
     background-color: #fff;
 }
 
-.home__activity-container {
+.page__activity-container {
     display: flex;
     width: 1200px;
     gap: 20px;
     align-items: center;
 }
 
-.home__activity-content {
+.page__activity-content {
     flex: 1 1 50%;
 }
 
-.home__activity-title {
+.page__activity-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--hover-color);
     margin-bottom: 20px;
 }
 
-.home__activity-description {
+.page__activity-description {
     margin-bottom: 20px;
     color: var(--text-color);
 }
 
-.home__activity-button {
+.page__activity-button {
     padding: 10px 10px;
     background-color: #3dc0b0;
     color: var(--white-color);
@@ -107,40 +152,62 @@
     transition: background-color 0.25s ease;
 }
 
-.home__activity-button:hover {
+.page__activity-button:hover {
     background-color: var(--hover-color);
 }
 
-.home__activity-image {
+.page__activity-image {
     flex: 1 1 50%;
     position: relative;
     text-align: center;
 }
 
-.home__activity-img {
+.page__activity-img {
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.home__activity-tags {
+.page__activity-tags {
     display: flex;
     justify-content: center;
     margin-top: -30px;
     position: relative;
 }
 
-.home__activity-tag {
+.page__activity-tag {
     background-color: #3dc0b0;
     color: #fff;
     padding: 10px 40px;
     text-align: center; 
 }
 
-.home__activity-tag-title {
+.page__activity-tag-title {
     font-weight: bold;
 }
 
-.home__activity-tag-description {
+.page__activity-tag-description {
     font-weight: bold;
+}
+
+.page__video{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__video-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--hover-color);
+    margin-bottom: 50px;
+}
+
+.page__video-grid{
+    display: flex;
+    gap: 80px;
+    max-width: 1200px;
 }

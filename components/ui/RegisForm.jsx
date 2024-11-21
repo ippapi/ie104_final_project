@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/UI/RegisForm.module.css";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({bg_color="#f8dff6"}) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,12 +23,12 @@ const RegistrationForm = () => {
 
   return (
     <>
-        <div className={styles['regisForm']}>
+        <div className={styles['regisForm']}  style={{backgroundColor: bg_color}}>
             <div className={styles['regisForm__logo']}> 
                 <img src="/logo.png" style={{height: '200px'}} />
                 <h4>Kid&Us đang tuyển sinh các bé từ 1-7 tuổi</h4>
             </div>
-            <form className={styles['regisForm__form']} onSubmit={handleSubmit}>
+            <form className={styles['regisForm__form']} onSubmit={handleSubmit}> 
                 <div className={styles['regisForm__row']}>
                 <div className={styles['regisForm__field']}>
                     <label className={styles['regisForm__label']}>First Name (Tên)</label>
