@@ -1,19 +1,18 @@
 import React from 'react';
 import styles from '@/styles/Page.module.css';
 import Slideshow from '@/components/ui/SlideShow';
-import GridContent from '@/components/ui/GridContent';
-import EffectImg from '@/components/ui/EffectImg';
 import CardContent from '@/components/ui/CardContent';
 import RegistrationForm from '@/components/ui/RegisForm';
 import HelpButton from '@/components/ui/HelpButton';
 import VideoPlayer from '@/components/ui/VideoPlayer';
+import CharacterShow from '@/components/ui/CharacterShow';
 
 const big_slide_images = [
     "/course1_2/slides/slide_1.png",
     "/course1_2/slides/slide_2.png"
 ]
 
-const promo_content = [
+const promo_contents = [
     { 
         content: {
             img: '/course1_2/kid_1.png', 
@@ -48,6 +47,27 @@ const promo_content = [
     },
 ]
 
+const character_info = [
+    {
+        title: 'Mousy',
+        discription: 'Tiếng anh cho trẻ một tuổi',
+        href: '#promo_1',
+        img: '/course1_2/mousy.png'
+    },
+    {
+        title: 'Linda',
+        discription: 'Tiếng anh cho trẻ hai tuổi',
+        href: '#promo_2',
+        img: '/course1_2/linda.png'
+    }
+]
+
+const character_style = {
+    effect: 'bounce',
+    width: '100px', 
+    height: '100px'
+}
+
 const Main = () => {
     return (
         <>
@@ -58,40 +78,17 @@ const Main = () => {
                     <p className={styles['page__about-description']}>
                         Qua các bài hát và trò chơi, những giác quan của em bé được kích thích và bé dần quen với ngữ điệu tiếng Anh. Trong trải nghiệm này, các bé sẽ được đồng hành bởi hai nhân vật đáng yêu: Mousy và Linda.
                     </p>
-                    <div className={styles['page__about-grid']}>
-                        <div className={styles['page__about__grid-item']}>
-                            <a href='#promo_1'>
-                                <EffectImg src='/course1_2/mousy.png' effect='bounce' width='100px' height='100px'/>
-                            </a>
-                            <div className={styles['page__about__grid__item-title']}>
-                                Mousy
-                            </div>
-                            <div className={styles['page__about__grid__item-content']}>
-                                Tiếng anh cho trẻ một tuổi
-                            </div>
-                        </div>
-
-                        <div className={styles['page__about__item']}>
-                            <a href='#promo_2'>
-                                <EffectImg src='/course1_2/linda.png' effect='bounce' width='100px' height='100px'/>
-                            </a>
-                            <div className={styles['page__about__grid__item-title']}>
-                                Mousy
-                            </div>
-                            <div className={styles['page__about__grid__item-content']}>
-                                Tiếng anh cho trẻ hai tuổi
-                            </div>
-                        </div>
-                    </div>
+                    <CharacterShow contents={character_info}  style={character_style} />
                 </div>
             </section>
             <section className={styles['page__promo-block']}>
-                <div className={styles['page__promo__block-1']} id='promo_1'>
-                    <CardContent content={promo_content[0].content} style={promo_content[0].style}/>
-                </div>
-                <div className={styles['page__promo__block-2']} id='promo_2'>
-                    <CardContent content={promo_content[1].content} style={promo_content[1].style}/>
-                </div>
+                {promo_contents.map((promo_content, index) => {
+                    return (
+                        <div className={styles[`page__promo__block-${index + 1}`]} id={`promo_${index + 1}`}>
+                            <CardContent content={promo_content.content} style={promo_content.style}/>
+                        </div>        
+                    );
+                })}
             </section>
 
             <section className={styles['page__video']}>

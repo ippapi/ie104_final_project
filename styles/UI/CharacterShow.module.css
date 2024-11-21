@@ -1,0 +1,23 @@
+.charactershow-grid{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.charactershow__gird-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charactershow__grid__item-title{
+    font-size: 1.25rem;
+    color: var(--hover-color);
+}
+
+.charactershow__grid__item-content{
+    color: var(--text-color);
+    max-width: 150px;
+}

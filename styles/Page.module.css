@@ -28,23 +28,12 @@
 .page__about-grid{
     display: flex;
     justify-content: center;
-    gap: 200px;
-    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
 }
 
-.page__about__gird-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.page__about__grid__item-title{
-    font-size: 1.5rem;
-    color: var(--hover-color);
-}
-
-.page__about__grid__item-content{
-    color: var(--text-color);
+.page__about__grid-about{
+    max-width: 300px;
 }
 
 .page__promo-grid{

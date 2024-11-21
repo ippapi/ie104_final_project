@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from '@/styles/UI/EffectImage.module.css';
 
-const EffectImg = ({ src, effect = 'zoom', width = 'auto', height = 'auto'}) => {
+const EffectImg = ({ src, style = {effect: 'scalezoom', width: 'auto', height: 'auto'}}) => {
   return (
     <img 
         src={src} 
-        className={`${styles['effect-image']} ${styles[`effect-image--${effect}`]}`} 
-        style={{ width, height }}
+        className={`${styles['effect-image']} ${styles[`effect-image--${style.effect}`]}`} 
+        style={{ width: style.width, height: style.height }}
     />
   );
 };

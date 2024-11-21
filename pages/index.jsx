@@ -31,6 +31,7 @@ const promo_content = [
             button: 'Tìm hiểu thêm'
         },
         style: {
+            effect: 'scalezoom',
             width: "50vw",
             height: "25vw",
             img_pos: 'left',
@@ -46,6 +47,7 @@ const promo_content = [
             button: 'Tìm hiểu thêm'
         },
         style: {
+            effect: 'scalezoom',
             width: "50vw",
             height: "25vw",
             img_pos: 'left', 
@@ -61,6 +63,7 @@ const promo_content = [
             button: 'Tìm hiểu thêm'
         },
         style: {
+            effect: 'scalezoom',
             width: "50vw",
             height: "25vw",
             img_pos: 'right', 
@@ -76,6 +79,7 @@ const promo_content = [
             button: 'Tìm hiểu thêm'
         },
         style: {
+            effect: 'scalezoom',
             width: "50vw",
             height: "25vw",
             img_pos: 'right', 
@@ -118,7 +122,7 @@ const Main = () => {
                 <div className={styles['page__about-content']}>
                     <h2 className={styles['page__about-title']}>Chúng tôi là Kids&Us</h2>
                     <p className={styles['page__about-description']}>Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.</p>
-                    <EffectImg src={'/index/kid.png'}/>
+                    <EffectImg src={'/index/kid.png'} />
                     <GridContent content={statis_content} />
                 </div>
             </section>
