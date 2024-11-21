@@ -1,5 +1,4 @@
-/* Block: help-button */
-.help-button {
+.helpButton {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -11,19 +10,25 @@
   cursor: pointer;
 }
 
-.helpButton__header {
+.helpButton:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+.helpButton__popup-heading{
+  padding: 20px 20px;
+  background-color: #fe699f;
+  border-radius: 10px;
+}
+
+.helpButton__popup__heading-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.help-button:hover {
-  background-color: var(--hover-color);
-  color: var(--text-color);
-}
-
-.helpButton__close {
+.helpButton__popup-close {
   background: none;
   border: none;
   font-size: 50px;
@@ -31,11 +36,14 @@
   color: var(--text-color);
 }
 
-.help-button__popup {
+.helpButton__popup-close:hover{
+  color: var(--hover-color);
+}
+
+.helpButton__popup {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  padding: 20px;
   border-radius: 10px;
   z-index: 1000;
   width: 400px;
@@ -43,12 +51,12 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.help-button__label {
+.helpButton__popup-label {
   display: block;
   color: var(--text-color);
 }
 
-.help-button__submit {
+.helpButton__popup-submit {
   color: white;
   border: none;
   padding: 10px;
@@ -58,21 +66,69 @@
   background-color: #fe699f;
 }
 
-.help-button__submit:hover {
+.helpButton__popup-submit:hover {
   background-color: #e24c8d;
 }
 
-/* Element: Close Button (help-button__close) */
-.help-button__close {
-  background-color: #ccc;
-  color: black;
-  border: none;
-  padding: 8px;
-  border-radius: 4px;
-  margin-top: 10px;
-  cursor: pointer;
+.helpButton__popup-content {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.help-button__close:hover {
-  background-color: #bbb;
+.helpButton__popup-form {
+  width: 300px;
+  padding: 20px 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+}
+
+.helpButton__popup__form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.helpButton__popup__form-label {
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.helpButton__popup__form-input,
+.helpButton__popup__form-textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  margin-top: 5px;
+}
+
+.helpButton__popup__form-input:focus,
+.helpButton__popup__form-textarea:focus {
+  border-color: #fe699f;
+}
+
+.helpButton__popup__form-textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.helpButton__popup__form-submit {
+  width: 100%;
+  align-self: center;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fe699f;
+  color: var(--white-color);
+} 
+
+.helpButton__popup__form-submit:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
 }

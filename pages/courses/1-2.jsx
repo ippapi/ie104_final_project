@@ -8,10 +8,8 @@ import RegistrationForm from '@/components/ui/RegisForm';
 import HelpButton from '@/components/ui/HelpButton';
 
 const big_slide_images = [
-    "/index/slides/slide_1.png",
-    "/index/slides/slide_2.png",
-    "/index/slides/slide_3.png",
-    "/index/slides/slide_4.png",
+    "/course1_2/slides/slide_1.png",
+    "/course1_2/slides/slide_2.png"
 ]
 
 const statis_content = [
@@ -23,7 +21,7 @@ const statis_content = [
 
 const promo_content = [
     { 
-        src: '/index/kid_1.jpg', 
+        src: '/kid_1.jpg', 
         title: 'Khóa học tiếng Anh cho trẻ 1-2 tuổi', 
         content: 'Bé đã sẵn sàng học ngôn ngữ ngay từ khi sinh ra. Cơ hội này được tận dụng tối đa tại Kids&Us nhằm thôi thúc bé học qua các giác quan của mình.', 
         img_pos: 'left', 
@@ -31,7 +29,7 @@ const promo_content = [
         link: "/courses/1-2"
     },
     { 
-        src: '/index/kid_2.jpg', 
+        src: '/kid_2.jpg', 
         title: 'Khóa học tiếng Anh cho trẻ 3-8 tuổi', 
         content: 'Ở giai đoạn mầm non - tiểu học, chơi trò chơi và tương tác với các bạn cùng nhóm trở thành tác nhân thúc đẩy học tập nhanh nhất, thông qua tập bài hát, đọc hiểu và nhiều hoạt động khác đã được thiết kế phù hợp với độ tuổi và động lực của các em.', 
         img_pos: 'left', 
@@ -39,7 +37,7 @@ const promo_content = [
         link: "/courses/3-8"
     },
     { 
-        src: '/index/kid_3.jpg', 
+        src: '/kid_3.jpg', 
         title: 'Khóa học tiếng Anh cho trẻ 9-12 tuổi', 
         content: 'Kids&Us khuyến khích trẻ mô tả thế giới xung quanh và chính bản thân mình. Như vậy, tiếng Anh sẽ đồng hành cùng các em trong quá trình phát triển bản thân. Nền tảng kỹ năng nghe nói vững chắc có từ những khóa học trước cho phép trẻ dễ dàng phát triển thêm kỹ năng đọc viết.', 
         img_pos: 'right', 
@@ -47,7 +45,7 @@ const promo_content = [
         link: "/courses/9-12"
     },
     { 
-        src: '/index/kid_4.jpg', 
+        src: '/kid_4.jpg', 
         title: 'Khóa học tiếng Anh cho trẻ 13-18 tuổi', 
         content: 'Các bạn tuổi teen giờ đã có thể giao tiếp tiếng Anh bằng nhiều mẫu câu đa dạng, điều này giúp tăng cường sự lưu loát và phản xạ ngôn ngữ của các em. Ngoài ra, tại Kids&Us, chúng tôi luôn khuyến khích tư duy phản biện, giúp các em tự tin bước vào tương lai.', 
         img_pos: 'right', 
@@ -57,8 +55,8 @@ const promo_content = [
 ]
 
 const slide_images = [
-    "/index/kid_5.jpg",
-    "/index/kid_6.jpg",
+    "/kid_5.jpg",
+    "/kid_6.jpg",
 ]
 
 const method_content = [
@@ -83,11 +81,12 @@ const Main = () => {
             <Slideshow images={big_slide_images} interval={5000} />
             <section className={styles['home__about']}>
                 <div className={styles['home__about-content']}>
-                    <h2 className={styles['home__about-title']}>Chúng tôi là Kids&Us</h2>
+                    <h2 className={styles['home__about-title']}>Các em bé học tiếng Anh qua cảm xúc</h2>
                     <p className={styles['home__about-description']}>
-                        Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.
+                        Qua các bài hát và trò chơi, những giác quan của em bé được kích thích và bé dần quen với ngữ điệu tiếng Anh. Trong trải nghiệm này, các bé sẽ được đồng hành bởi hai nhân vật đáng yêu:
+                        Mousy và Linda.
                     </p>
-                    <EffectImg src={'/index/kid.png'}/>
+                    <EffectImg src={'/kid.png'}/>
                     <GridContent content={statis_content} />
                 </div>
             </section>
@@ -130,7 +129,7 @@ const Main = () => {
                     </div>
 
                     <div className={styles["home__activity-image"]}>
-                        <img src='/index/kid_activity.jpg' className={styles["home__activity-img"]} />
+                        <img src='/kid_activity.jpg' className={styles["home__activity-img"]} />
                         <div className={styles["home__activity-tags"]}>
                             {activity_tags.map((tag, index) => (
                             <div key={index} className={styles["home__activity-tag"]}>

@@ -2,15 +2,28 @@ import React, { useState } from 'react';
 import styles from '@/styles/UI/HelpButton.module.css';
 
 const HelpButton = () => {
+    const [data, setData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+
     const [isOpen, setIsOpen] = useState(false);
 
     const popUp = () => {
         setIsOpen(!isOpen);
     };
 
+    const updateData = (e) => {
+        const {name, value} = e.target; 
+        setData({...data , [name] : value})
+    }
+
     const submit = (e) => {
         e.preventDefault();
-        console.log("Help request submitted");
+        console.log(data);
+        setIsOpen(false);
     };
 
     return (
@@ -21,8 +34,8 @@ const HelpButton = () => {
 
             {isOpen && (
                 <div className={styles['helpButton__popup']}>
-                    <form>
-                        <div className={styles["helpButton__popup-header"]}>
+                    <div className={styles['helpButton__popup-heading']}>
+                        <div className={styles["helpButton__popup__heading-title"]}>
                             <h3>Kids&Us Vietnam</h3>
                             <button
                                 className={styles["helpButton__popup-close"]}
@@ -32,9 +45,10 @@ const HelpButton = () => {
                             </button>
                         </div>
 
-                        <p className={styles['helpButton__popup-content']}>
+                        <p className={styles['helpButton__popup__heading-content']}>
                             Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
                         </p>
+                    </div>
 
                         <form className={styles["helpButton__popup-form"]}>
                             <div className={styles["helpButton__popup__form-field"]}>
@@ -42,10 +56,11 @@ const HelpButton = () => {
                             <input
                                 type="text"
                                 name="name"
-                                value={formData.name}
-                                onChange={handleChange}
+                                value={data.name}
+                                onChange={updateData}
                                 className={styles["helpButton__popup__form-input"]}
-                                placeholder="Nhập họ và tên của bạn"
+                                placeholder="Tên của bạn"
+                                required
                             />
                             </div>
                             <div className={styles["helpButton__popup__form-field"]}>
@@ -53,43 +68,39 @@ const HelpButton = () => {
                             <input
                                 type="text"
                                 name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
+                                value={data.phone}
+                                onChange={updateData}
                                 className={styles["helpButton__popup__form-input"]}
-                                placeholder="Nhập số điện thoại"
+                                placeholder="Số điện thoại của bạn"
+                                required
                             />
                             </div>
-                            <div className={styles["helpButton__helpButton__popup__form-field"]}>
+                            <div className={styles["helpButton__popup__form-field"]}>
                             <label className={styles["helpButton__popup__form-label"]}>Email</label>
                             <input
                                 type="email"
                                 name="email"
-                                value={formData.email}
-                                onChange={handleChange}
+                                value={data.email}
+                                onChange={updateData}
                                 className={styles["helpButton__popup__form-input"]}
-                                placeholder="Nhập email"
+                                placeholder="Email của bạn"
                             />
                             </div>
                             <div className={styles["helpButton__popup__form-field"]}>
                             <label className={styles["helpButton__popup__form-label"]}>Lời nhắn</label>
                             <textarea
                                 name="message"
-                                value={formData.message}
-                                onChange={handleChange}
+                                value={data.message}
+                                onChange={updateData}
                                 className={styles["helpButton__popup__form-textarea"]}
-                                placeholder="Nhập lời nhắn của bạn"
+                                placeholder="Nhập tin nhắn của bạn"
+                                required
                             />
                             </div>
-                            <button type="submit" className={styles["helpButton__popup__form-submit"]}>
-                            Gửi
+                            <button type="submit" className={styles["helpButton__popup__form-submit"]} onClick={submit}>
+                                Gửi tin nhắn
                             </button>
                         </form>
-
-            
-                    <button type="submit" className={styles['helpButton__popup__form-submit']} onClick={submit}>
-                        Gửi tin nhắn
-                    </button>
-          </form>
         </div>
       )}
     </div>
