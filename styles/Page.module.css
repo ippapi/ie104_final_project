@@ -37,11 +37,10 @@
 }
 
 .page__promo-grid{
-    padding-left: 0;
-    padding-right: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    overflow:hidden;
     color: var(--white-color);
 }
 

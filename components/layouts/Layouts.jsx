@@ -5,21 +5,19 @@ import Header from '@/components/layouts/Header';
 import Footer from '@/components/layouts/Footer';
 
 const Layout = ({ children }) => {
-  return (
-    <div>
-      <header className={styles['layout__header']}>
-        <Header />
-      </header>
+    return (
+        <div>
+            <Header />
 
-      <main className = { styles['layout__main'] }>
-        { children } 
-      </main>
+            <main className = { styles['layout__main'] }>
+                { children } 
+            </main>
 
-      <footer className = { styles['layout__footer']}>
-        <Footer />
-      </footer>
-    </div>
-  );
+            <footer className = { styles['layout__footer']}>
+                <Footer />
+            </footer>
+        </div>
+    );
 };
 
 export default Layout;

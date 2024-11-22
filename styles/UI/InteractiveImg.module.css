@@ -1,0 +1,40 @@
+/* Block: interactive-img */
+.interactive-img {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .interactive-img__thumbnail {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .interactive-img__thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .interactive-img__viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .interactive-img__viewer-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-out;
+  }
+  
