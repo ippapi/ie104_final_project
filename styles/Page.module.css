@@ -1,6 +1,11 @@
 .page__about {
-    padding: 20px 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
+}
+
+.page__about-pink {
+    background-color: #fef4fd;
 }
 
 .page__about-content {
@@ -10,18 +15,18 @@
 }
 
 .page__about-title {
-    font-size: 2.5rem;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:.5px;
     font-weight: bold;
-    margin-top: 50px;
     color: var(--hover-color);
 }
 
 .page__about-description {
-    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: var(--text-color);
 }
 
@@ -36,6 +41,60 @@
     max-width: 300px;
 }
 
+.page__about-btn{
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #4ab6ad;
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size:16px;
+    font-weight:300
+}
+
+.page__about-btn:hover{
+    background-color: var(--hover-color);
+}
+
+.page__about-subgrid {
+    position:absolute;
+    left:50%;
+    bottom:-11%;
+    transform:translateX(-50%);
+    width:481px;
+    height:106px;
+    background:#4ab6adb3;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:1;
+    letter-spacing:-.5px
+}
+
+.page__about__subgrid-col {
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+
+.page__about__subgrid__col-text{
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    font-size:16px;
+    margin-bottom:5px
+}
+
+.page__about__subgrid__col-title{
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    font-size:28px
+}
+
 .page__promo-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,61 +103,42 @@
     color: var(--white-color);
 }
 
-.page__promo-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.page__promo__grid-sub-title,.page__promo__grid-title,.page__promo__grid-content, .page__promo__grid-link {
+    margin:10px 10px 20px 20px;
+    font-size:16px;
+    font-weight:300
 }
 
-.page__promo__block-1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #fff0f1;
+.page__promo__grid-sub-title{
+    font-family:"Bodoni Moda",cursive;
+    font-style:italic;
+    font-size:20px;
 }
 
-.page__promo__block-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #73cfe4;
+.page__promo__grid-title{
+    font-size:24px;
+    font-weight:400;
+    line-height:1.2em
 }
 
-.page__method {
-    padding: 20px 20px;
-    text-align: center;
-    background-color: #fef4fd;
-}
-
-.page__method-content {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.page__method-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--hover-color);
-    margin-bottom: 20px;
-}
-
-.page__method-description {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.page__promo__grid-link{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: var(--white-color);
     color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.page__method-gridcontent { 
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+.page__promo__grid-link:hover{
+    background-color: var(--hover-color);
+    color: var(--white-color);
+    border-color: #e63946;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .page__activity {
@@ -120,7 +160,7 @@
 }
 
 .page__activity-title {
-    font-size: 1.5rem;
+    font-size:15px;
     font-weight: bold;
     color: var(--hover-color);
     margin-bottom: 20px;
@@ -188,7 +228,7 @@
 }
 
 .page__video-title{
-    font-size: 2.5rem;
+    font-size:15px;
     font-weight: bold;
     color: var(--hover-color);
     margin-bottom: 50px;

@@ -6,10 +6,6 @@
     --constract-color: #f05a21;
 }
 
-a {
-  text-decoration:none;
-}
-
 /*Reset CSS using*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -142,3 +138,13 @@ table {
   border-spacing: 0;
 }
   
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #353535;
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}

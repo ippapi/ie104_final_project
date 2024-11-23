@@ -21,11 +21,23 @@
 }
   
 .content-grid__title {
-    font-size: 1.5rem;
+    font-size:38px;
+    font-weight:550;
     font-weight: bold;
+    padding-top: 10px;
     padding-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.content-grid__title--zoom:hover {
+    transform: scale(1.2);
+}
+
+.content-grid__title--scalezoom:hover {
+    transform: scale(1.2);
+    transform-origin: center center;
 }
   
-.content-grid__content {
-    font-size: 1rem;
+.content-grid__title--bounce:hover {
+    transform: translateY(-10px);
 }

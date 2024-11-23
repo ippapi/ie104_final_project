@@ -1,8 +1,6 @@
 .wave-section-up {
     opacity: 0;
     position: relative;
-    padding-top: 40px;
-    padding-bottom: 20px;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }

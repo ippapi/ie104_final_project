@@ -16,8 +16,6 @@ const WaveSection = ({ children, direction = 'up' }) => {
   
         if (rect.top + sectionHeight * 0.5 <= windowHeight && rect.top + sectionHeight * 0.5 >= 0) {
             setIsStart(true);
-        }else{
-            setIsStart(false);
         }
     };
   

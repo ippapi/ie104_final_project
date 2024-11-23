@@ -13,34 +13,3 @@
     flex: 1;
     text-align: left;
 }
-
-.content-card__title {
-    font-size: 1.25rem;
-    padding-bottom: 20px;
-    color: var(--text-color);
-}
-
-.content-card__content {
-    font-size: 1rem;
-    padding-bottom: 20px;
-}
-
-.content-card__link{
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: var(--white-color);
-    color: var(--text-color);
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.content-card__link:hover{
-    background-color: var(--hover-color);
-    color: var(--white-color);
-    border-color: #e63946;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
