@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
-import styles from "@/styles/Layout.module.css"
+import styles from "@/styles/UI/NavBar.module.css"
 import Dropdown from "@/components/ui/DropDown";
+import EffectImg from "@/components/ui/EffectImg";
 
 const NavBar = () => {
     const menuItems = [
@@ -35,6 +36,7 @@ const NavBar = () => {
     ];
 
     const [bgColor, setBgColor] = useState('var(--white-color)');
+    const [isSticky, setIsSticky] = useState(false);
 
     const getColor = (scrollY) => {
         const maxScroll = 1000;
@@ -55,6 +57,7 @@ const NavBar = () => {
         const handleScroll = () => {
             const scrollY = window.scrollY;;
             setBgColor(getColor(scrollY));
+            setIsSticky(window.scrollY > 50);
         };
         
         window.addEventListener('scroll', handleScroll);
@@ -65,25 +68,25 @@ const NavBar = () => {
     }, []);
 
     return (
-        <header className={styles['layout__header']} style={{backgroundColor: bgColor}}>
-            <a href="/" className={styles['layout__header-logo']}> 
-                <img src="/logo.png"   style={{height: '60px'}} />
+        <nav className={`${styles['nav']} ${isSticky ? styles['sticky'] : ""}`} style={{backgroundColor: bgColor}}>
+            <a href="/" className={styles['nav__logo']}> 
+                <EffectImg src="/logo.png"   style={{effect:'scalezoom', height: '65px', width:'auto'}} />
             </a>
 
-            <div className={styles['layout__header-menu']}>
+            <div className={styles['nav__menu']}>
                 {menuItems.map((item) =>
                     item.dropdown ? (
                         <Dropdown options={item.dropdown} label={item.label} />
                     ) : (
-                        <a href={item.link} className={styles['layout__header-link']}>
+                        <a href={item.link} className={styles['nav__menu-link']}>
                             {item.label}
                         </a>
                   )
                 )}
 
-                <a href="/dang-ky" className={styles['layout__header-button']}>Đăng Ký</a>
+                <a href="/dang-ky" className={styles['nav__menu-button']}>Đăng Ký</a>
             </div>
-        </header>);
+        </nav>);
 };
 
 export default NavBar;

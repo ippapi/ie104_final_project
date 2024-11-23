@@ -17,7 +17,7 @@ const Dropdown = ({ options, label }) => {
       <span className={styles['dropdown__label']}>{label}</span>
       {isOpen && (
         <div className={styles['dropdown__drawer']}>
-          {options.map((option) => (
+          {options.map((option, index) => (
             <a href={option.link} className={styles['dropdown__item']}>
               {option.name}
             </a>

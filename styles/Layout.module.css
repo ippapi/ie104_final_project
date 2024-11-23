@@ -5,60 +5,28 @@
     align-items:center;
     justify-content: space-between;
     font-size:12px;
-    padding-left:5%;
-    padding-right:5%;
     background-color:var(--hover-color);
     color:#fff;
 }
 
 .layout__header-phone {
+    margin-left: 100px;
     font-size:15px;
     color: var(--white-color);
 }
 
 .layout__header-language{
+    margin-right: 100px;
     font-size:12px;
+    border-radius: 5px;
     background-color: var(--white-color);
     color: var(--text-color);
 }
 
-  
-.layout__header-logo{
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--hover-color);
+.layout__header-language:hover{
+    border-radius: 5px 5px 0px 0px;
 }
-  
-.layout__header-menu {
-    display: flex;
-    gap: 50px;
-}
-  
-.layout__header-link {
-    padding: 10px 10px;
-    text-decoration: none;
-    color: var(--text-color);
-}
-  
-.layout__header-link:hover {
-    color: var(--hover-color);
-}
-
-.layout__header-button {
-    padding: 10px 10px;
-    background-color: var(--constract-color);
-    color: var(--text-color);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.layout__header-button:hover{
-    background-color: var(--hover-color);
-} 
-  
+    
 .layout__main {
     background-color: var(--white-color);
     min-height: 100vh;

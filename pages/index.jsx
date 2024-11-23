@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '@/styles/Page.module.css';
+import NavBar from '@/components/ui/NavBar';
 import Slideshow from '@/components/ui/SlideShow';
+import WaveSection from '@/components/ui/WaveSection';
 import GridContent from '@/components/ui/GridContent';
 import EffectImg from '@/components/ui/EffectImg';
 import CardContent from '@/components/ui/CardContent';
@@ -117,58 +119,70 @@ const activity_tags = [
 const Main = () => {
     return (
         <>
+            <NavBar />
             <Slideshow images={big_slide_images} interval={5000} />
-            <section className={styles['page__about']}>
-                <div className={styles['page__about-content']}>
-                    <h2 className={styles['page__about-title']}>Chúng tôi là Kids&Us</h2>
-                    <p className={styles['page__about-description']}>Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.</p>
-                    <EffectImg src={'/index/kid.png'} />
-                    <GridContent content={statis_content} />
-                </div>
-            </section>
-            <section className={styles['page__promo-grid']}>
-                {promo_content.map((card) => (<CardContent content={card.content} style={card.style}/>))}
-            </section>
-            <section className={styles['page__method']}>
-                <div className={styles['page__method-content']}>
-                    <h2 className={styles['page__method-title']}>Phương pháp học tiếng Anh</h2>
-                    <p className={styles['page__method-description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
-                    <div className={styles['page__method-gridcontent']}>
-                        <Slideshow images={slide_images} style={{width: '600px', height: '600px'}}/>
-                        <GridContent content={method_content.content} style={method_content.style}/>
+            <WaveSection>
+                <section className={styles['page__about']}>
+                    <div className={styles['page__about-content']}>
+                        <h2 className={styles['page__about-title']}>Chúng tôi là Kids&Us</h2>
+                        <p className={styles['page__about-description']}>Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.</p>
+                        <EffectImg src={'/index/kid.png'} />
+                        <GridContent content={statis_content} />
                     </div>
-                </div>
-            </section>
-            <section className={styles["page__activity"]}>
-                <div className={styles["page__activity-container"]}>
-                    <div className={styles["page__activity-content"]}>
-                        <h2 className={styles["page__activity-title"]}>
-                            Các hoạt động bằng tiếng Anh
-                        </h2>
-                        <p className={styles["page__activity-description"]}>
-                            Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.
-                        </p>
-                        <a href='/activity/en' className={styles["page__activity-button"]}>Xem các hoạt động</a>
-                    </div>
+                </section>
+            </WaveSection>
+            <WaveSection>
+                <section className={styles['page__promo-grid']}>
+                    {promo_content.map((card) => (<CardContent content={card.content} style={card.style}/>))}
+                </section>
+            </WaveSection>
 
-                    <div className={styles["page__activity-image"]}>
-                        <img src='/index/kid_activity.jpg' className={styles["page__activity-img"]} />
-                        <div className={styles["page__activity-tags"]}>
-                            {activity_tags.map((tag) => (
-                            <div className={styles["page__activity-tag"]}>
-                                <span className={styles["page__activity-tag-title"]}>{tag.title}</span>
-                                <br></br>
-                                <span className={styles["page__activity-tag-description"]}>{tag.description}</span>
-                            </div>
-                            ))}
+            <WaveSection>
+                <section className={styles['page__method']}>
+                    <div className={styles['page__method-content']}>
+                        <h2 className={styles['page__method-title']}>Phương pháp học tiếng Anh</h2>
+                        <p className={styles['page__method-description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
+                        <div className={styles['page__method-gridcontent']}>
+                            <Slideshow images={slide_images} style={{width: '600px', height: '600px'}}/>
+                            <GridContent content={method_content.content} style={method_content.style}/>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </WaveSection>
+
+            <WaveSection>
+                <section className={styles["page__activity"]}>
+                    <div className={styles["page__activity-container"]}>
+                        <div className={styles["page__activity-content"]}>
+                            <h2 className={styles["page__activity-title"]}>
+                                Các hoạt động bằng tiếng Anh
+                            </h2>
+                            <p className={styles["page__activity-description"]}>
+                                Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.
+                            </p>
+                            <a href='/activity/en' className={styles["page__activity-button"]}>Xem các hoạt động</a>
+                        </div>
+                        <div className={styles["page__activity-image"]}>
+                            <img src='/index/kid_activity.jpg' className={styles["page__activity-img"]} />
+                            <div className={styles["page__activity-tags"]}>
+                                {activity_tags.map((tag) => (
+                                <div className={styles["page__activity-tag"]}>
+                                    <span className={styles["page__activity-tag-title"]}>{tag.title}</span>
+                                    <br></br>
+                                    <span className={styles["page__activity-tag-description"]}>{tag.description}</span>
+                                </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </WaveSection>
             
-            <section>
-                <RegistrationForm bg_color="#f8dff6" /> 
-            </section>
+            <WaveSection>
+                <section>
+                    <RegistrationForm bg_color="#f8dff6" />
+                </section>
+            </WaveSection>
 
             <HelpButton />
         </>

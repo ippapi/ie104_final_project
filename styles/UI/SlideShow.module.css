@@ -15,15 +15,20 @@
 }
 
 .slideshow__button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--text-color);
-  color: var(--white-color);
-  border: none;
-  padding: 10px 10px;
-  cursor: pointer;
-  z-index: 999;
+    display:none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ee154b4d;
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.slideshow:hover .slideshow__button{
+    display:block;
 }
 
 .slideshow__button:hover{
