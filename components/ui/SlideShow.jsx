@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "@/styles/UI/SlideShow.module.css";
 
-const Slideshow = ({ images, interval = 5000, style={width: '100%', height: '600px'}}) => {
+const Slideshow = ({ images, interval = 7000, style={width: '100%', height: '600px'}}) => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     useEffect(() => {

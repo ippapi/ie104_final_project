@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Page.module.css';
+import NavBar from '@/components/ui/NavBar';
+import WaveSection from '@/components/ui/WaveSection';
 import Slideshow from '@/components/ui/SlideShow';
 import CardContent from '@/components/ui/CardContent';
 import RegistrationForm from '@/components/ui/RegisForm';
@@ -115,6 +117,7 @@ const character_style = {
 const Main = () => {
     return (
         <>
+            <NavBar />
             <Slideshow images={big_slide_images} interval={5000} />
             <section className={styles['page__about']}>
                 <div className={styles['page__about-content']}>

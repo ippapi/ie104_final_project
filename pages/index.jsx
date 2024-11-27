@@ -10,10 +10,10 @@ import RegistrationForm from '@/components/ui/RegisForm';
 import HelpButton from '@/components/ui/HelpButton';
 
 const big_slide_images = [
-    "/index/slides/slide_1.png",
-    "/index/slides/slide_2.png",
-    "/index/slides/slide_3.png",
-    "/index/slides/slide_4.png",
+    "/course1_2/slides/slide_2.png",
+    "/course3_8/slides/slide_2.png",
+    "/course9_12/slides/slide_2.png",
+    "/course13_18/slides/slide_2.png",
 ]
 
 const statis_content = [
@@ -129,10 +129,10 @@ const Main = () => {
             <NavBar />
             <Slideshow images={big_slide_images} interval={5000} />
             <WaveSection>
-                <section className={styles['page__about']}>
-                    <div className={styles['page__about-content']}>
-                        <h2 className={styles['page__about-title']}>Chúng tôi là Kids&Us</h2>
-                        <p className={styles['page__about-description']}>Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.</p>
+                <section className={styles['page']}>
+                    <div className={styles['page__content']}>
+                        <h2 className={styles['page__title']}>Chúng tôi là Kids&Us</h2>
+                        <p className={styles['page__description']}>Kids&Us đã có mặt tại Tây Ban Nha, An-đô-ra, Italia, Pháp, Bỉ, Cộng hòa Séc, Mexico, Nhật Bản, Myanmar và Việt Nam.</p>
                         <EffectImg src={'/index/kid.png'} style = {{effect: 'bounce', width: '80%', height: 'auto'}}/>
                         <GridContent content={statis_content} style={statis_style}/>
                     </div>
@@ -149,11 +149,11 @@ const Main = () => {
                 </section>
             </WaveSection>
             <WaveSection>
-                <section className={`${styles['page__about']} ${styles['page__about-pink']}`}>
+                <section className={`${styles['page']} ${styles['page-pink']}`}>
                     <div className={styles['page__method-content']}>
-                        <h2 className={styles['page__about-title']}>Phương pháp học tiếng Anh</h2>
-                        <p className={styles['page__about-description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
-                        <div className={styles['page__about-grid']}>
+                        <h2 className={styles['page__title']}>Phương pháp học tiếng Anh</h2>
+                        <p className={styles['page__description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
+                        <div className={styles['page__grid']}>
                             <Slideshow images={slide_images} style={{width: '600px', height: '600px'}}/>
                             <GridContent content={method_content.content} style={method_content.style}/>
                         </div>
@@ -165,24 +165,24 @@ const Main = () => {
                 <section className={styles["page__activity"]}>
                     <div className={styles["page__activity-container"]}>
                         <div className={styles["page__activity-content"]}>
-                            <h2 className={styles['page__about-title']}>Các hoạt động bằng tiếng Anh</h2>
-                            <p className={styles["page__about-description"]}>Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.</p>
-                            <a href='/activity/en' className={styles['page__about-btn']}>Xem các hoạt động ❯ </a>
+                            <h2 className={styles['page__title']}>Các hoạt động bằng tiếng Anh</h2>
+                            <p className={styles["page__description"]}>Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.</p>
+                            <a href='/activity/en' className={styles['page__btn']}>Xem các hoạt động ❯ </a>
                         </div>
                         <div className={styles["page__activity-image"]}>
                             <img src="/index/kid_activity.jpg" />
-                            <div className={styles['page__about-subgrid']}>
-                                <div className={styles['page__about__subgrid-col']}>
-                                    <span className={styles['page__about__subgrid__col-text']}>Story</span>
-                                    <span className={styles['page__about__subgrid__col-title']}>Time</span>
+                            <div className={styles['page__subgrid']}>
+                                <div className={styles['page__subgrid-col']}>
+                                    <span className={styles['page__subgrid__col-text']}>Story</span>
+                                    <span className={styles['page__subgrid__col-title']}>Time</span>
                                 </div>
-                                <div className={styles['page__about__subgrid-col']}>
-                                    <span className={styles['page__about__subgrid__col-text']}>Little</span>
-                                    <span className={styles['page__about__subgrid__col-title']}>Chef</span>
+                                <div className={styles['page__subgrid-col']}>
+                                    <span className={styles['page__subgrid__col-text']}>Little</span>
+                                    <span className={styles['page__subgrid__col-title']}>Chef</span>
                                 </div>
-                                <div className={styles['page__about__subgrid-col']}>
-                                    <span className={styles['page__about__subgrid__col-text']}>Art</span>
-                                    <span className={styles['page__about__subgrid__col-title']}>Craft</span>
+                                <div className={styles['page__subgrid-col']}>
+                                    <span className={styles['page__subgrid__col-text']}>Art</span>
+                                    <span className={styles['page__subgrid__col-title']}>Craft</span>
                                 </div>
                             </div>
                         </div>
@@ -191,9 +191,13 @@ const Main = () => {
             </WaveSection>
             
             <WaveSection>
-                <section>
-                    <RegistrationForm bg_color="#f8dff6" />
+                <section className={styles['page__form']}>
+                    <div className={styles["page__content"]}>
+                        <h2 className={styles['page__title']}>Đăng ký ngay</h2>
+                        <p className={styles["page__description"]}>Đừng bỏ lỡ cơ hội để con bạn được học tiếng Anh một cách tự nhiên nhất!</p>
+                    </div>
                 </section>
+                <RegistrationForm bg_color="#f8dff6" />
             </WaveSection>
 
             <HelpButton />

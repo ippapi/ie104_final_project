@@ -1,20 +1,20 @@
-.page__about {
+.page {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
 }
 
-.page__about-pink {
+.page-pink {
     background-color: #fef4fd;
 }
 
-.page__about-content {
+.page__content {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.page__about-title {
+.page__title {
     font-size:32px;
     font-weight:700;
     letter-spacing:.5px;
@@ -22,7 +22,7 @@
     color: var(--hover-color);
 }
 
-.page__about-description {
+.page__description {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -30,18 +30,18 @@
     color: var(--text-color);
 }
 
-.page__about-grid{
+.page__grid{
     display: flex;
     justify-content: center;
     gap: 50px;
     margin-bottom: 50px;
 }
 
-.page__about__grid-about{
+.page__grid-about{
     max-width: 300px;
 }
 
-.page__about-btn{
+.page__btn{
     display: inline-block;
     padding: 20px 20px;
     background-color: #4ab6ad;
@@ -55,11 +55,11 @@
     font-weight:300
 }
 
-.page__about-btn:hover{
+.page__btn:hover{
     background-color: var(--hover-color);
 }
 
-.page__about-subgrid {
+.page__subgrid {
     position:absolute;
     left:50%;
     bottom:-11%;
@@ -74,13 +74,13 @@
     letter-spacing:-.5px
 }
 
-.page__about__subgrid-col {
+.page__subgrid-col {
     display:flex;
     flex-direction:column;
     align-items:center
 }
 
-.page__about__subgrid__col-text{
+.page__subgrid__col-text{
     color:#fff;
     text-align:center;
     white-space:nowrap;
@@ -88,7 +88,7 @@
     margin-bottom:5px
 }
 
-.page__about__subgrid__col-title{
+.page__subgrid__col-title{
     color:#fff;
     text-align:center;
     white-space:nowrap;
@@ -103,7 +103,22 @@
     color: var(--white-color);
 }
 
-.page__promo__grid-sub-title,.page__promo__grid-title,.page__promo__grid-content, .page__promo__grid-link {
+.page__promo-block-1, .page__promo-block-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__promo-block-1 {
+    background-color: var(--background-one);
+}
+
+.page__promo-block-2 {
+    background-color: var(--background-two);
+}
+
+
+.page__promo__grid-sub-title,.page__promo__grid-title,.page__promo__grid-content, .page__promo__grid-link, .page__promo__grid-detail-title, .page__promo__grid-detail-sub-title, .page__promo__grid-detail-content {
     margin:10px 10px 20px 20px;
     font-size:16px;
     font-weight:300
@@ -115,13 +130,13 @@
     font-size:20px;
 }
 
-.page__promo__grid-title{
+.page__promo__grid-title, .page__promo__grid-detail-title {
     font-size:24px;
-    font-weight:400;
+    font-weight:bold;
     line-height:1.2em
 }
 
-.page__promo__grid-link{
+.page__promo__grid-link, .page__promo__grid-detail-link{
     display: inline-block;
     padding: 10px 10px;
     background-color: var(--white-color);
@@ -133,7 +148,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.page__promo__grid-link:hover{
+.page__promo__grid-link:hover, .page__promo__grid-detail-link:hover{
     background-color: var(--hover-color);
     color: var(--white-color);
     border-color: #e63946;
@@ -141,11 +156,38 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.page__promo__grid-detail-title {
+    color: var(--text-color);
+}
+
+.page__promo__grid-detail-sub-title {
+    font-size:24px;
+    font-weight:bold;
+    color: var(--hover-color);
+}
+
+.page__promo__grid-detail-about {
+    font-weight:bold;
+}
+
+.page__promo__grid-detail-content{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page__promo__grid-detail-link{
+    margin-left: 30px;
+    background-color: var(--constract-button);
+    color: var(--white-color);
+}
+
 .page__activity {
     display: flex;
     justify-content: center;
     padding: 20px 20px;
     background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .page__activity-container {
@@ -190,32 +232,10 @@
     text-align: center;
 }
 
-.page__activity-img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.page__activity-tags {
-    display: flex;
-    justify-content: center;
-    margin-top: -30px;
-    position: relative;
-}
-
-.page__activity-tag {
-    background-color: #3dc0b0;
-    color: #fff;
-    padding: 10px 40px;
-    text-align: center; 
-}
-
-.page__activity-tag-title {
-    font-weight: bold;
-}
-
-.page__activity-tag-description {
-    font-weight: bold;
+.page__form { 
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .page__video{

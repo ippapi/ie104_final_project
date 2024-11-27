@@ -2,12 +2,16 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 10px;
+  padding: 8px 10px;
   background-color: #fe699f;
   color: var(--white-color);
   border: none;
-  border-radius: 20px;
+  border-radius: 10000px;
   cursor: pointer;
+}
+
+.helpButton__icon {
+  width: 30px;
 }
 
 .helpButton:hover {
@@ -19,6 +23,7 @@
   padding: 20px 20px;
   background-color: #fe699f;
   border-radius: 10px;
+  color: var(--white-color);
 }
 
 .helpButton__popup__heading-title {
@@ -26,6 +31,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size:x-large;
 }
 
 .helpButton__popup-close {

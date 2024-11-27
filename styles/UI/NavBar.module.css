@@ -43,7 +43,7 @@
     border:none;
     cursor:pointer;
     color: var(--white-color);
-    background-color:#C3512F;
+    background-color: var(--constract-button);
 }
 
 .nav__menu-button:hover{

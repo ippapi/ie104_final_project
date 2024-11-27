@@ -4,6 +4,9 @@
     --white-color: #fff;
     --hover-background: #f1f1f1;
     --constract-color: #f05a21;
+    --background-one: #FFF0F1;
+    --background-two: #73CFE4;
+    --constract-button: #C3512F;
 }
 
 /*Reset CSS using*/
@@ -147,4 +150,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+sup {
+  color: var(--hover-color);
 }

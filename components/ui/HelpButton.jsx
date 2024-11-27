@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from '@/styles/UI/HelpButton.module.css';
 
 const HelpButton = () => {
@@ -15,6 +15,20 @@ const HelpButton = () => {
         setIsOpen(!isOpen);
     };
 
+    const elementRef = useRef(null);
+    const handleClickOutside = (e) => {
+        if (elementRef.current && !elementRef.current.contains(e.target)) {
+          setIsOpen(false); 
+        }
+    };
+    
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     const updateData = (e) => {
         const {name, value} = e.target; 
         setData({...data , [name] : value})
@@ -29,14 +43,14 @@ const HelpButton = () => {
     return (
         <div>
             <button className={styles['helpButton']} onClick={popUp}>
-                Ask for Help
+                <img src='/chat.png' className={styles['helpButton__icon']}/>
             </button>
 
             {isOpen && (
-                <div className={styles['helpButton__popup']}>
+                <div ref={elementRef} className={styles['helpButton__popup']}>
                     <div className={styles['helpButton__popup-heading']}>
                         <div className={styles["helpButton__popup__heading-title"]}>
-                            <h3>Kids&Us Vietnam</h3>
+                            <h1>Kids&Us Vietnam</h1>
                             <button
                                 className={styles["helpButton__popup-close"]}
                                 onClick={popUp}
