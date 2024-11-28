@@ -214,15 +214,14 @@ const Main = () => {
                 </section>
             </WaveSection>
 
-            <div className={styles['page__media-grid']}>
-                <InteractiveImg
-                    src="/course13_18/kid_zzz.jpeg"
-                    imgs={["/course13_18/kid_zzz.jpeg", "/course13_18/kid_activity.jpg", "/course13_18/kid_edu.jpg"]}
-                    alt="Kid and us"
-                    width="400"
-                    height="300"
-                />
-            </div>
+            <InteractiveImg
+                src="/course13_18/kid_zzz.jpeg"
+                imgs={["/course13_18/kid_zzz.jpeg", "/course13_18/kid_activity.jpg", "/course13_18/kid_edu.jpg"]}
+                alt="Kid and us"
+                width="400"
+                height="300"
+            />
+
             
             <WaveSection>
                 <section id='page__regis'>

@@ -238,12 +238,3 @@
     text-align: center;
     line-height: 1.5em;
 }
-
-.page__media-grid{
-    display: flex;
-    gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 70px;
-    justify-content: center;
-    align-items: center;
-}
