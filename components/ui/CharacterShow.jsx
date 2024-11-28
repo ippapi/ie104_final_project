@@ -1,23 +1,24 @@
 import React from "react";
-import EffectImg from "./EffectImg";
 
 import styles from "@/styles/UI/CharacterShow.module.css";
 
+import EffectImg from "@/components/ui/EffectImg";
+
 const CharacterShow = ({ contents, style = {color: 'var(--constract-color)', effect: 'zoom', width: '10px', height: '10px'}}) => {
     return (
-        <div className={styles['charactershow-grid']}>
+        <div className={styles['grid']}>
             {contents.map((content) => {
                 return (
-                    <div className={styles['charactershow__grid-item']}>
+                    <div className={styles['grid-item']}>
                         <a href={content.href}>
                             <EffectImg src={content.img} style={{effect: style.effect, width: style.width, height: style.height}} />
                         </a>
                         <div style={{color: style.color}}>
-                            <div className={styles['charactershow__grid__item-title']}>
+                            <div className={styles['grid__item-title']}>
                                 {content.title}
                             </div>
                         </div>
-                        <div className={styles['charactershow__grid__item-content']}>
+                        <div className={styles['grid__item-content']}>
                             {content.discription}
                         </div>
                     </div>

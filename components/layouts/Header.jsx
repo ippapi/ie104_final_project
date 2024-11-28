@@ -12,9 +12,9 @@ const Header = () => {
     }
     
     return (
-        <div className={styles['layout__header']}>
-            <div class={styles['layout__header-phone']}>1800 6175</div>
-            <div class={styles['layout__header-language']}>
+        <div className={styles['header']}>
+            <div class={styles['header-phone']}>1800 6175</div>
+            <div class={styles['header-language']}>
                 <Dropdown options={languages.dropdown} label={languages.label} />
             </div>
         </div>

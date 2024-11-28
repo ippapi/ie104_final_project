@@ -8,24 +8,24 @@
     align-items: center;
 }
 
-.interactive-img__grid__item {
+.grid__item {
     text-align: center;
     margin-top: 20px;
 }
   
-.interactive-img__grid__item-thumbnail {
+.grid__item-thumbnail {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
   
-.interactive-img__grid__item-thumbnail:hover {
+.grid__item-thumbnail:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
   
-.interactive-img__grid__item-viewer {
+.grid__item-viewer {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,11 +39,39 @@
     cursor: pointer;
 }
   
-.interactive-img__grid__item__viewer-image {
+.grid__item__viewer-image {
     max-width: 500px;
     max-height: 500px;
     border-radius: 10px;
     box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease-out;
+}
+
+.grid__item__viewer-button {
+    display:none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ee154b4d;
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.grid__item__viewer-button{
+    display:block;
+}
+
+.grid__item__viewer-button:hover{
+  background-color: var(--hover-color);
+}
+
+.grid__item__viewer-button:first-of-type {
+  left: 600px;
+}
+
+.grid__item__viewer-button:last-of-type {
+  right: 600px;
 }
   

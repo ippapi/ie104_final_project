@@ -31,17 +31,17 @@
     visibility: visible;
 }
   
-.dropdown__item {
+.dropdown__drawer-item {
     padding: 10px;
     cursor: pointer;
     color: var(--text-color);
     text-decoration: none;
 }
   
-.dropdown__item:hover {
+.dropdown__drawer-item:hover {
     background-color: var(--hover-background);
 }
 
-.dropdown__item:last-child:hover {
+.dropdown__drawer-item:last-child:hover {
     border-radius: 0px 0px 10px 10px;
 }

@@ -76,16 +76,16 @@ const Footer = () => {
 
 
   return (
-        <footer className={styles['layout__footer']}>
-            <div className={styles['layout__footer-body']}>
-                <div className={styles['layout__footer__body-grid-container']}>
+        <footer className={styles['footer']}>
+            <div className={styles['footer__body']}>
+                <div className={styles['body__container']}>
                     {contents.map((content) => {
                         return <FooterCol content={content} />
                     })}
-                    <div className={styles['layout__footer__body__grid-container-grid-item']}>
-                        <h4 className={styles['layout__footer__body__grid-container__grid-item-widget-title']}>LIÊN HỆ VỚI CHÚNG TÔI</h4>
-                        <div className={styles['layout__footer__body__grid-container__grid-item-textwidge']}>
-                            <ul className={styles['layout__footer__body__grid-container__grid-item__textwidge-contact-link']}>
+                    <div className={styles['body__container-item']}>
+                        <h4 className={styles['item-widget-title']}>LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                        <div className={styles['item-textwidge']}>
+                            <ul className={styles['item__textwidge-links']}>
                                 <li>  47-49 Nguyễn Thị Thập, Khu dân cư Him Lam, Quận 7, TP.HCM</li>
                                 <li> info@kidsandus.net.vn</li>
                                 <li>1800 6175</li>
@@ -94,8 +94,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles['layout__footer-info']}>
-                <div className={styles['layout__footer__info-copyright']}>
+            <div className={styles['footer__info']}>
+                <div className={styles['footer__info-copyright']}>
                     <p>Copyright © 2024 Kids&amp;Us Vietnam</p>
                 </div>
             </div>

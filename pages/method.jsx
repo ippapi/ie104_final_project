@@ -72,7 +72,7 @@ const character_info = [
 
 const character_style = {
     color: '#1e4b75',
-    effect: 'bounce',
+    effect: 'border',
     width: '100px', 
     height: '100px'
 }
@@ -85,9 +85,9 @@ const Main = () => {
             <WaveSection>
                 <section className={styles['page']}>
                     <div className={styles['page__content']}>
-                        <h2 className={styles['page__title']}>Các em bé học tiếng Anh qua cảm xúc</h2>
+                        <h2 className={styles['page__title']}>Phương pháp của chúng tôi</h2>
                         <p className={styles['page__description']}>
-                            Qua các bài hát và trò chơi, những giác quan của em bé được kích thích và bé dần quen với ngữ điệu tiếng Anh. Trong trải nghiệm này, các bé sẽ được đồng hành bởi hai nhân vật đáng yêu: <br></br> Mousy và Linda.
+                        Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.
                         </p>
 
                         <WaveSection>

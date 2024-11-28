@@ -60,7 +60,7 @@
     background-color: var(--hover-color);
 }
 
-.page__subgrid {
+.subgrid {
     position:absolute;
     left:50%;
     bottom:-11%;
@@ -75,13 +75,13 @@
     letter-spacing:-.5px
 }
 
-.page__subgrid-col {
+.subgrid-col {
     display:flex;
     flex-direction:column;
     align-items:center
 }
 
-.page__subgrid__col-text{
+.subgrid__col-text{
     color:#fff;
     text-align:center;
     white-space:nowrap;
@@ -89,14 +89,14 @@
     margin-bottom:5px
 }
 
-.page__subgrid__col-title{
+.subgrid__col-title{
     color:#fff;
     text-align:center;
     white-space:nowrap;
     font-size:28px
 }
 
-.page__promo-grid{
+.promo-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -104,40 +104,40 @@
     color: var(--white-color);
 }
 
-.page__promo-block-1, .page__promo-block-2{
+.promo-block-1, .promo-block-2{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.page__promo-block-1 {
+.promo-block-1 {
     background-color: var(--background-one);
 }
 
-.page__promo-block-2 {
+.promo-block-2 {
     background-color: var(--background-two);
 }
 
 
-.page__promo__grid-sub-title,.page__promo__grid-title,.page__promo__grid-content, .page__promo__grid-link, .page__promo__grid-detail-title, .page__promo__grid-detail-sub-title, .page__promo__grid-detail-content {
+.promo__grid-sub-title,.promo__grid-title,.promo__grid-content, .promo__grid-link, .promo__grid-detail-title, .promo__grid-detail-sub-title, .promo__grid-detail-content {
     margin:10px 10px 20px 20px;
     font-size:16px;
     font-weight:300
 }
 
-.page__promo__grid-sub-title{
+.promo__grid-sub-title{
     font-family:"Bodoni Moda",cursive;
     font-style:italic;
     font-size:20px;
 }
 
-.page__promo__grid-title, .page__promo__grid-detail-title {
+.promo__grid-title, .promo__grid-detail-title {
     font-size:24px;
     font-weight:bold;
     line-height:1.2em
 }
 
-.page__promo__grid-link, .page__promo__grid-detail-link{
+.promo__grid-link, .promo__grid-detail-link{
     display: inline-block;
     padding: 10px 10px;
     background-color: var(--white-color);
@@ -149,7 +149,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.page__promo__grid-link:hover, .page__promo__grid-detail-link:hover{
+.promo__grid-link:hover, .promo__grid-detail-link:hover{
     background-color: var(--hover-color);
     color: var(--white-color);
     border-color: #e63946;
@@ -157,17 +157,17 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.page__promo__grid-detail-title {
+.promo__grid-detail-title {
     color: var(--text-color);
 }
 
-.page__promo__grid-detail-sub-title {
+.promo__grid-detail-sub-title {
     font-size:24px;
     font-weight:bold;
     color: var(--hover-color);
 }
 
-.page__promo__grid-detail-sub-title::after {
+.promo__grid-detail-sub-title::after {
     content: '';
     width: 80px;
     display: block;
@@ -176,22 +176,22 @@
     border-bottom: solid 4px #f05a21;
 }
 
-.page__promo__grid-detail-about {
+.promo__grid-detail-about {
     font-weight:bold;
 }
 
-.page__promo__grid-detail-content{
+.promo__grid-detail-content{
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.page__promo__grid-detail-link{
+.promo__grid-detail-link{
     margin-left: 30px;
     background-color: var(--constract-button);
     color: var(--white-color);
 }
 
-.page__activity {
+.activity {
     display: flex;
     justify-content: center;
     padding: 20px 20px;
@@ -200,18 +200,18 @@
     margin-bottom: 50px;
 }
 
-.page__activity-container {
+.activity-container {
     display: flex;
     width: 1200px;
     gap: 20px;
     align-items: center;
 }
 
-.page__activity-content {
+.activity-content {
     flex: 1 1 50%;
 }
 
-.page__activity-image {
+.activity-image {
     flex: 1 1 50%;
     position: relative;
     text-align: center;

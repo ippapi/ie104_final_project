@@ -18,3 +18,16 @@
 .effect-image--bounce:hover {
     transform: translateY(-30px);
 }
+
+.effect-image--border {
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 0;
+    transition: transform 0.5s ease, border-color 0.5s ease, border-radius 3.2s ease;
+}
+
+.effect-image--border:hover {
+    transform: scale(0.9);
+    border-color: black;
+    border-radius: 1000px;
+}

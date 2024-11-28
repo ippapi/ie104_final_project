@@ -144,24 +144,24 @@ const Main = () => {
                 {promo_contents.map((promo_content, index) => {
                     return ( 
                         <WaveSection direction='none'>
-                            <div className={styles[`page__promo-block-${2 - (index + 1) % 2}`]} id={`promo_${index + 1}`}>
+                            <div className={styles[`promo-block-${2 - (index + 1) % 2}`]} id={`promo_${index + 1}`}>
                                 <WaveSection direction={index % 2 == 0 ? 'right' : 'left'}>
                                     <CardContent img={promo_content.img} style={promo_content.style}>
-                                        <h3 className={styles['page__promo__grid-detail-title']}>{promo_content.content.title}</h3>
-                                        <h3 className={styles['page__promo__grid-detail-sub-title']}>{promo_content.content.sub_title}</h3>
-                                        <p className={styles['page__promo__grid-detail-content']}>
-                                            <span className={styles['page__promo__grid-detail-about']}>Mục tiêu khóa học: </span>
+                                        <h3 className={styles['promo__grid-detail-title']}>{promo_content.content.title}</h3>
+                                        <h3 className={styles['promo__grid-detail-sub-title']}>{promo_content.content.sub_title}</h3>
+                                        <p className={styles['promo__grid-detail-content']}>
+                                            <span className={styles['promo__grid-detail-about']}>Mục tiêu khóa học: </span>
                                             {promo_content.content.description_1}
                                         </p>
-                                        <p className={styles['page__promo__grid-detail-content']}>
-                                            <span className={styles['page__promo__grid-detail-about']}>Sĩ số: </span>
+                                        <p className={styles['promo__grid-detail-content']}>
+                                            <span className={styles['promo__grid-detail-about']}>Sĩ số: </span>
                                             {promo_content.content.description_2}
                                         </p>
-                                        <p className={styles['page__promo__grid-detail-content']}>
-                                            <span className={styles['page__promo__grid-detail-about']}>Vai trò của gia đình: </span>
+                                        <p className={styles['promo__grid-detail-content']}>
+                                            <span className={styles['promo__grid-detail-about']}>Vai trò của gia đình: </span>
                                             {promo_content.content.description_3}
                                             </p>
-                                        <a href={promo_content.content.href} className={styles['page__promo__grid-detail-link']}>{promo_content.content.button}</a>
+                                        <a href={promo_content.content.href} className={styles['promo__grid-detail-link']}>{promo_content.content.button}</a>
                                     </CardContent>
                                 </WaveSection>
                             </div>

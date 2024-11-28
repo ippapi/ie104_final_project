@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+
 import styles from '@/styles/UI/WaveSection.module.css'; 
 
 const WaveSection = ({ children, direction = 'up' }) => {
@@ -6,7 +7,6 @@ const WaveSection = ({ children, direction = 'up' }) => {
     const [isStart, setIsStart] = useState(false);
   
     useEffect(() => {
-      
         const checkVisibility = () => {
         const section = sectionRef.current;
         const rect = section.getBoundingClientRect();
@@ -20,7 +20,6 @@ const WaveSection = ({ children, direction = 'up' }) => {
     };
   
     window.addEventListener('scroll', checkVisibility);
-  
         checkVisibility();
 
         return () => {

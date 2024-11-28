@@ -139,18 +139,18 @@ const Main = () => {
                 </section>
             </WaveSection>
             <WaveSection>
-                <section className={styles['page__promo-grid']}>
+                <section className={styles['promo-grid']}>
                     {promo_content.map((card) => (<CardContent img={card.img} style={card.style}>
-                        <h3 className={styles['page__promo__grid-sub-title']}>{card.content.sub_title}</h3>
-                        <h3 className={styles['page__promo__grid-title']}>{card.content.title}</h3>
-                        <p className={styles['page__promo__grid-content']}>{card.content.description}</p>
-                        <a href={card.content.href} className={styles['page__promo__grid-link']}>{card.content.button}</a>
+                        <h3 className={styles['promo__grid-sub-title']}>{card.content.sub_title}</h3>
+                        <h3 className={styles['promo__grid-title']}>{card.content.title}</h3>
+                        <p className={styles['promo__grid-content']}>{card.content.description}</p>
+                        <a href={card.content.href} className={styles['promo__grid-link']}>{card.content.button}</a>
                     </CardContent>))}
                 </section>
             </WaveSection>
             <WaveSection>
                 <section className={`${styles['page']} ${styles['page-pink']}`}>
-                    <div className={styles['page__method-content']}>
+                    <div>
                         <h2 className={styles['page__title']}>Phương pháp học tiếng Anh</h2>
                         <p className={styles['page__description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>
                         <div className={styles['page__grid']}>
@@ -162,27 +162,27 @@ const Main = () => {
             </WaveSection>
 
             <WaveSection>
-                <section className={styles["page__activity"]}>
-                    <div className={styles["page__activity-container"]}>
-                        <div className={styles["page__activity-content"]}>
+                <section className={styles["activity"]}>
+                    <div className={styles["activity-container"]}>
+                        <div className={styles["activity-content"]}>
                             <h2 className={styles['page__title']}>Các hoạt động bằng tiếng Anh</h2>
                             <p className={styles["page__description"]}>Tại Kids&Us, tiếng Anh không chỉ được dùng trong lớp học, chúng tôi xây dựng rất nhiều hoạt động bằng tiếng Anh để củng cố trải nghiệm học tập của học viên.</p>
                             <a href='/activity/en' className={styles['page__btn']}>Xem các hoạt động ❯ </a>
                         </div>
-                        <div className={styles["page__activity-image"]}>
+                        <div className={styles["activity-image"]}>
                             <img src="/index/kid_activity.jpg" />
-                            <div className={styles['page__subgrid']}>
-                                <div className={styles['page__subgrid-col']}>
-                                    <span className={styles['page__subgrid__col-text']}>Story</span>
-                                    <span className={styles['page__subgrid__col-title']}>Time</span>
+                            <div className={styles['subgrid']}>
+                                <div className={styles['subgrid-col']}>
+                                    <span className={styles['subgrid__col-text']}>Story</span>
+                                    <span className={styles['subgrid__col-title']}>Time</span>
                                 </div>
-                                <div className={styles['page__subgrid-col']}>
-                                    <span className={styles['page__subgrid__col-text']}>Little</span>
-                                    <span className={styles['page__subgrid__col-title']}>Chef</span>
+                                <div className={styles['subgrid-col']}>
+                                    <span className={styles['subgrid__col-text']}>Little</span>
+                                    <span className={styles['subgrid__col-title']}>Chef</span>
                                 </div>
-                                <div className={styles['page__subgrid-col']}>
-                                    <span className={styles['page__subgrid__col-text']}>Art</span>
-                                    <span className={styles['page__subgrid__col-title']}>Craft</span>
+                                <div className={styles['subgrid-col']}>
+                                    <span className={styles['subgrid__col-text']}>Art</span>
+                                    <span className={styles['subgrid__col-title']}>Craft</span>
                                 </div>
                             </div>
                         </div>

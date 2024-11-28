@@ -9,13 +9,11 @@ const Layout = ({ children }) => {
         <div>
             <Header />
 
-            <main className = { styles['layout__main'] }>
+            <main className = { styles['main'] }>
                 { children } 
             </main>
 
-            <footer className = { styles['layout__footer']}>
-                <Footer />
-            </footer>
+            <Footer />
         </div>
     );
 };

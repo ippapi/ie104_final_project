@@ -1,4 +1,4 @@
-.charactershow-grid{
+.grid{
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -6,13 +6,13 @@
     margin-bottom: 50px;
 }
 
-.charactershow__gird-item{
+.gird-item{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.charactershow__grid__item-title{
+.grid__item-title{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.25rem;
@@ -20,11 +20,11 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.charactershow__grid__item-title:hover{
+.grid__item-title:hover{
     transform: scale(1.2);
     color: var(--hover-color);
 }
 
-.charactershow__grid__item-content{
+.grid__item-content{
     color: var(--text-color);
 }

@@ -31,25 +31,25 @@
     margin-top:48px;
 }
 
-.regisForm__container-item {
+.container-item {
     display:grid;
     grid-template-columns:1fr 1fr;
     overflow:hidden;
     margin-top:20px;
 }
 
-.regisForm__container__item-label {
+.container__item-label {
     font-size:14px;
     margin-bottom:8px;
 }
 
-.regisForm__container__item-example {
+.container__item-example {
     display:block;
     margin-bottom:5px;
     font-size:11px;
 }
 
-.regisForm__container__item-input {
+.container__item-input {
     box-sizing: border-box;
     width:95%;
     padding:10px;
@@ -59,7 +59,7 @@
     font-size:16px;
 }
 
-.regisForm__container__item-error-message {
+.container__item-error-message {
     color:#f2545b;
     font-size:14px;
 }

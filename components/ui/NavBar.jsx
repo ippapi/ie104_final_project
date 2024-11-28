@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
-import styles from "@/styles/UI/NavBar.module.css"
+
+import styles from "@/styles/UI/NavBar.module.css";
+
 import Dropdown from "@/components/ui/DropDown";
 import EffectImg from "@/components/ui/EffectImg";
 
@@ -70,7 +72,10 @@ const NavBar = () => {
     return (
         <nav className={`${styles['nav']} ${isSticky ? styles['sticky'] : ""}`} style={{backgroundColor: bgColor}}>
             <a href="/" className={styles['nav__logo']}> 
-                <EffectImg src="/logo.png"   style={{effect:'scalezoom', height: '65px', width:'auto'}} />
+                <EffectImg 
+                    src="/logo.png" 
+                    style={{effect:'scalezoom', height: '65px', width:'auto'}} 
+                />
             </a>
 
             <div className={styles['nav__menu']}>
@@ -81,7 +86,7 @@ const NavBar = () => {
                         <a href={item.link} className={styles['nav__menu-link']}>
                             {item.label}
                         </a>
-                  )
+                    )
                 )}
 
                 <a href="/dang-ky" className={styles['nav__menu-button']}>Đăng Ký</a>

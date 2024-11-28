@@ -18,7 +18,8 @@ const VideoPlayer = ({ videoId = "OzEF9ml8HNU", width = "560", height = "315", a
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            >
+            </iframe>
         </div>
     );
 };

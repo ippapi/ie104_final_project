@@ -1,18 +1,34 @@
 import React, { useState, useRef, useEffect } from 'react';
+
 import styles from '@/styles/UI/HelpButton.module.css';
 
 const HelpButton = () => {
-    const [data, setData] = useState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-    });
+    const [data, setData] = useState({});
+    const [error, setError] = useState({});
 
     const [isOpen, setIsOpen] = useState(false);
 
     const popUp = () => {
         setIsOpen(!isOpen);
+    };
+
+    const updateData = (e) => {
+        const {name, value} = e.target; 
+        setData({...data , [name] : value})
+        setError({...error, [name]: false});
+    };
+
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+        if (!value.trim()) {
+            setError({...error, [name]: true});
+        }
+    };
+
+    const submit = (e) => {
+        e.preventDefault();
+        console.log(data);
+        setIsOpen(false);
     };
 
     const elementRef = useRef(null);
@@ -29,17 +45,6 @@ const HelpButton = () => {
         };
     }, []);
 
-    const updateData = (e) => {
-        const {name, value} = e.target; 
-        setData({...data , [name] : value})
-    }
-
-    const submit = (e) => {
-        e.preventDefault();
-        console.log(data);
-        setIsOpen(false);
-    };
-
     return (
         <div>
             <button className={styles['helpButton']} onClick={popUp}>
@@ -47,78 +52,86 @@ const HelpButton = () => {
             </button>
 
             {isOpen && (
-                <div ref={elementRef} className={styles['helpButton__popup']}>
-                    <div className={styles['helpButton__popup-heading']}>
-                        <div className={styles["helpButton__popup__heading-title"]}>
+                <div ref={elementRef} className={styles['popup']}>
+                    <div className={styles['popup__heading']}>
+                        <div className={styles["popup__heading-title"]}>
                             <h1>Kids&Us Vietnam</h1>
                             <button
-                                className={styles["helpButton__popup-close"]}
+                                className={styles["popup__close"]}
                                 onClick={popUp}
                             >
                                 -
                             </button>
                         </div>
 
-                        <p className={styles['helpButton__popup__heading-content']}>
+                        <p className={styles['popup__heading-content']}>
                             Anh chị vui lòng điền vào biểu mẫu dưới đây và Kids&Us Vietnam sẽ liên hệ lại với anh chị ngay khi có thể.
                         </p>
                     </div>
 
-                        <form className={styles["helpButton__popup-form"]}>
-                            <div className={styles["helpButton__popup__form-field"]}>
-                            <label className={styles["helpButton__popup__form-label"]}>Họ và tên</label>
+                        <form className={styles["popup__form"]}>
+                            <div className={styles["popup__form-field"]}>
+                            <label className={styles["popup__form-label"]}>Họ và tên<sup>*</sup></label>
                             <input
                                 type="text"
                                 name="name"
-                                value={data.name}
-                                onChange={updateData}
-                                className={styles["helpButton__popup__form-input"]}
+                                className={styles["popup__form-input"]}
                                 placeholder="Tên của bạn"
+                                onChange={updateData}
+                                onBlur={handleBlur}
                                 required
                             />
                             </div>
-                            <div className={styles["helpButton__popup__form-field"]}>
-                            <label className={styles["helpButton__popup__form-label"]}>Sđt</label>
+                            {
+                                error.name && <span className={styles["popup__form-error"]}>Please complete this required field.</span>
+                            }
+                            <div className={styles["popup__form-field"]}>
+                            <label className={styles["popup__form-label"]}>Số điện thoại<sup>*</sup></label>
                             <input
                                 type="text"
                                 name="phone"
-                                value={data.phone}
-                                onChange={updateData}
-                                className={styles["helpButton__popup__form-input"]}
+                                className={styles["popup__form-input"]}
                                 placeholder="Số điện thoại của bạn"
+                                onChange={updateData}
+                                onBlur={handleBlur}
                                 required
                             />
                             </div>
-                            <div className={styles["helpButton__popup__form-field"]}>
-                            <label className={styles["helpButton__popup__form-label"]}>Email</label>
+                            {
+                                error.phone && <span className={styles["popup__form-error"]}>Please complete this required field.</span>
+                            }
+                            <div className={styles["popup__form-field"]}>
+                            <label className={styles["popup__form-label"]}>Email</label>
                             <input
                                 type="email"
                                 name="email"
-                                value={data.email}
-                                onChange={updateData}
-                                className={styles["helpButton__popup__form-input"]}
+                                className={styles["popup__form-input"]}
                                 placeholder="Email của bạn"
+                                onChange={updateData}
                             />
                             </div>
-                            <div className={styles["helpButton__popup__form-field"]}>
-                            <label className={styles["helpButton__popup__form-label"]}>Lời nhắn</label>
+                            <div className={styles["popup__form-field"]}>
+                            <label className={styles["popup__form-label"]}>Lời nhắn<sup>*</sup></label>
                             <textarea
                                 name="message"
-                                value={data.message}
-                                onChange={updateData}
-                                className={styles["helpButton__popup__form-textarea"]}
+                                className={styles["popup__form-textarea"]}
                                 placeholder="Nhập tin nhắn của bạn"
+                                onChange={updateData}
+                                onBlur={handleBlur}
                                 required
                             />
                             </div>
-                            <button type="submit" className={styles["helpButton__popup__form-submit"]} onClick={submit}>
+                            {
+                                error.message && <span className={styles["popup__form-error"]}>Please complete this required field.</span>
+                            }
+                            <button type="submit" className={styles["popup__form-submit"]} onClick={submit}>
                                 Gửi tin nhắn
                             </button>
                         </form>
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default HelpButton;
