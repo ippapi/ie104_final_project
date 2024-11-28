@@ -1,7 +1,7 @@
 .charactershow-grid{
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 100px;
     align-items: center;
     margin-bottom: 50px;
 }
@@ -17,10 +17,14 @@
     margin-bottom: 10px;
     font-size: 1.25rem;
     font-weight:550;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.charactershow__grid__item-title:hover{
+    transform: scale(1.2);
     color: var(--hover-color);
 }
 
 .charactershow__grid__item-content{
     color: var(--text-color);
-    max-width: 150px;
 }

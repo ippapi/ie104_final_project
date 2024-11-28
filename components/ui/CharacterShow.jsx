@@ -3,7 +3,7 @@ import EffectImg from "./EffectImg";
 
 import styles from "@/styles/UI/CharacterShow.module.css";
 
-const CharacterShow = ({ contents, style = {effect: 'zoom', width: '10px', height: '10px'}}) => {
+const CharacterShow = ({ contents, style = {color: 'var(--constract-color)', effect: 'zoom', width: '10px', height: '10px'}}) => {
     return (
         <div className={styles['charactershow-grid']}>
             {contents.map((content) => {
@@ -12,8 +12,10 @@ const CharacterShow = ({ contents, style = {effect: 'zoom', width: '10px', heigh
                         <a href={content.href}>
                             <EffectImg src={content.img} style={{effect: style.effect, width: style.width, height: style.height}} />
                         </a>
-                        <div className={styles['charactershow__grid__item-title']}>
-                            {content.title}
+                        <div style={{color: style.color}}>
+                            <div className={styles['charactershow__grid__item-title']}>
+                                {content.title}
+                            </div>
                         </div>
                         <div className={styles['charactershow__grid__item-content']}>
                             {content.discription}
