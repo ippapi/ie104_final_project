@@ -4,9 +4,9 @@ import styles from "@/styles/UI/CharacterShow.module.css";
 
 import EffectImg from "@/components/ui/EffectImg";
 
-const CharacterShow = ({ contents, style = {color: 'var(--constract-color)', effect: 'zoom', width: '10px', height: '10px'}}) => {
+const CharacterShow = ({ contents, style = {color: 'var(--constract-color)', effect: 'zoom', width: '10px', height: '10px', gap: '10px'}}) => {
     return (
-        <div className={styles['grid']}>
+        <div className={styles['grid']} style={{gap: style.gap}}>
             {contents.map((content) => {
                 return (
                     <div className={styles['grid-item']}>

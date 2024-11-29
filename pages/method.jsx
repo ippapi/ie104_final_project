@@ -10,43 +10,85 @@ import VideoPlayer from '@/components/ui/VideoPlayer';
 import CharacterShow from '@/components/ui/CharacterShow';
 
 const big_slide_images = [
-    "/course1_2/slides/slide_1.png",
-    "/course1_2/slides/slide_2.png"
+    "/method/slides/slide_1.png",
+    "/method/slides/slide_2.png"
 ]
 
-const promo_contents = [
+const method_contents = [
     { 
-        img: '/course1_2/kid_1.png', 
+        img: '/method/kid_1.png', 
         content: {
-            title: 'Tiếng Anh cho trẻ 1 tuổi',
-            sub_title: 'Mousy',
-            description_1: 'Phát huy tối đa khả năng thấu hiểu ngôn ngữ bẩm sinh của bé. Việc cho bé quen dần với các kích thích bên ngoài sẽ giúp bé hiểu được các chỉ dẫn cơ bản bằng tiếng Anh.',
-            description_2: 'Mỗi lớp tối đa 5 bé, có người lớn đi kèm',
-            description_3: 'Khi chủ động tham gia các hoạt động trong lớp, bố mẹ sẽ tạo ra kết nối tinh thần với bé để cổ vũ bé học tập.', 
+            title: 'Bước một',
+            sub_title: 'Nghe',
+            description_1: 'Tương tự khi học tiếng mẹ đẻ, tiếp xúc của trẻ với tiếng Anh nên bắt đầu từ việc Lắng Nghe. Bắt đầu nghe càng sớm, trẻ càng tiếp thu tiếng Anh sớm hơn. Vì thế tại Kids&Us, trẻ từ 1 tuổi đã được cho tiếp xúc với tiếng Anh hằng ngày.',
             href: "#page__regis",
-            button: 'Tư vấn miễn phí'
         },
         style: {
-            effect: "zoom",
+            effect: "bounce",
             width: "60vw",
             height: "25vw",
-            img_pos: 'right',
+            img_pos: 'left',
             background: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
         }
     },
     { 
-        img: '/course1_2/kid_2.png', 
+        img: '/method/kid_2.png', 
         content: {
-            title: 'Tiếng Anh cho trẻ 2 tuổi', 
-            sub_title: 'Linda', 
-            description_1: 'Trong khóa này, các bé 2 tuổi được học cách gọi tên những thứ xung quanh bằng tiếng Anh: bộ phận cơ thể, màu sắc, hình dạng... Bé bắt đầu ráp từ thành những câu đơn giản và học các bài hát bằng tiếng Anh. Thông qua các hoạt động kích thích trí tưởng tượng, bé sẽ hình thành phát âm tự nhiên ngay từ nhỏ.',
-            description_2: 'Mỗi lớp tối đa 5 bé, có người lớn đi kèm',
-            description_3: 'Đến khoảng giữa khóa học, các bé trở nên dạn dĩ hơn và không cần bố mẹ cùng vào lớp nữa. Tuy nhiên, bố mẹ vẫn nên duy trì việc động viên con học khi ở nhà.',
+            title: 'Bước hai', 
+            sub_title: 'Hiểu', 
+            description_1: 'Khi trò chuyện với trẻ bằng tiếng mẹ đẻ, chúng ta nói rất tự nhiên, không ngại dùng nhiều từ ngữ, giọng điệu hay các cụm, câu, cách chia thì khác nhau. Phương pháp học tiếng Anh tại Kids&Us mô phỏng điều đó và tiếng Anh được sử dụng một cách tự nhiên, không cố tình giản lược hóa.',
             href: "#page__regis",
-            button: 'Tư vấn miễn phí'
         },
         style: {
-            effect: "zoom",
+            effect: "bounce",
+            width: "60vw",
+            height: "25vw",
+            img_pos: 'right', 
+            background: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+        }
+    },
+    { 
+        img: '/method/kid_3.png', 
+        content: {
+            title: 'Bước ba', 
+            sub_title: 'Nói', 
+            description_1: 'Nói là kết quả tự nhiên sau quá trình nghe và hiểu. Ở giai đoạn này, nhiều tình huống sẽ được tạo ra trong lớp để trẻ có cơ hội dùng lời nói diễn đạt tất cả những điều đã học trước đó.',
+            href: "#page__regis",
+        },
+        style: {
+            effect: "bounce",
+            width: "60vw",
+            height: "25vw",
+            img_pos: 'left', 
+            background: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+        }
+    },
+    { 
+        img: '/method/kid_4.png', 
+        content: {
+            title: 'Bước bốn', 
+            sub_title: 'Đọc', 
+            description_1: 'Kỳ vọng trẻ thạo tiếng Anh qua việc đọc và viết trước khi các em có thể nói đi ngược với quá trình tiếp thu ngôn ngữ tự nhiên. Liệu chim có thể bay nếu nó chưa học dang cánh? Trong phương pháp của Kids&Us, trẻ chỉ dành nhiều thời gian cho việc đọc một khi các em đã có thể đọc trôi chảy.',
+            href: "#page__regis",
+        },
+        style: {
+            effect: "bounce",
+            width: "60vw",
+            height: "25vw",
+            img_pos: 'right', 
+            background: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))',
+        }
+    },
+    { 
+        img: '/method/kid_5.png', 
+        content: {
+            title: 'Bước năm', 
+            sub_title: 'Viết', 
+            description_1: 'Để đạt giai đoạn này, trẻ cần phải vững cả 4 bước trước đó. Viết là quá trình diễn đạt ý nghĩ lên mặt giấy. Vì thế, học viên Kids&Us được bắt đầu viết khi các em đã có kỹ năng nói tốt và hiểu rõ những gì người khác nói.',
+            href: "#page__regis",
+        },
+        style: {
+            effect: "bounce",
             width: "60vw",
             height: "25vw",
             img_pos: 'left', 
@@ -57,24 +99,50 @@ const promo_contents = [
 
 const character_info = [
     {
-        title: 'Mousy',
-        discription: 'Tiếng anh cho trẻ một tuổi',
-        href: '#promo_1',
-        img: '/course1_2/mousy.png'
+        title: 'Nghe',
+        href: '#method_1',
+        img: '/method/nghe.png'
     },
     {
-        title: 'Linda',
-        discription: 'Tiếng anh cho trẻ hai tuổi',
-        href: '#promo_2',
-        img: '/course1_2/linda.png'
-    }
+        img: '/method/right-arrow.png'
+    },
+    {
+        title: 'Hiểu',
+        href: '#method_2',
+        img: '/method/hieu.png'
+    },
+    {
+        img: '/method/right-arrow.png'
+    },
+    {
+        title: 'Nói',
+        href: '#method_2',
+        img: '/method/noi.png'
+    },
+    {
+        img: '/method/right-arrow.png'
+    },
+    {
+        title: 'Đọc',
+        href: '#method_2',
+        img: '/method/doc.png'
+    },
+    {
+        img: '/method/right-arrow.png'
+    },
+    {
+        title: 'Viết',
+        href: '#method_2',
+        img: '/method/viet.png'
+    },
 ]
 
 const character_style = {
     color: '#1e4b75',
     effect: 'border',
-    width: '100px', 
-    height: '100px'
+    gap: '30px',
+    width: '60px', 
+    height: '60px'
 }
 
 const Main = () => {
@@ -87,38 +155,29 @@ const Main = () => {
                     <div className={styles['page__content']}>
                         <h2 className={styles['page__title']}>Phương pháp của chúng tôi</h2>
                         <p className={styles['page__description']}>
-                        Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.
+                            Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.
                         </p>
 
                         <WaveSection>
                             <CharacterShow contents={character_info}  style={character_style} />
                         </WaveSection>
+
                     </div>
                 </section>
             </WaveSection>
 
             <section>
-                {promo_contents.map((promo_content, index) => {
+                {method_contents.map((method_content, index) => {
                     return ( 
                         <WaveSection>
-                            <div className={styles[`promo-block-${index + 1}`]} id={`promo_${index + 1}`}>
+                            <div className={styles[`method__block-${2 - (index + 1) % 2}`]} id={`method__${2 - (index + 1) % 2}`}>
                                 <WaveSection direction={index % 2 == 0 ? 'right' : 'left'}>
-                                    <CardContent img={promo_content.img} style={promo_content.style}>
-                                        <h3 className={styles['promo__grid-detail-title']}>{promo_content.content.title}</h3>
-                                        <h3 className={styles['promo__grid-detail-sub-title']}>{promo_content.content.sub_title}</h3>
-                                        <p className={styles['promo__grid-detail-content']}>
-                                            <span className={styles['promo__grid-detail-about']}>Mục tiêu khóa học: </span>
-                                            {promo_content.content.description_1}
+                                    <CardContent img={method_content.img} style={method_content.style}>
+                                        <h3 className={styles['method__grid-detail-title']}>{method_content.content.title}</h3>
+                                        <h3 className={styles['method__grid-detail-sub-title']}>{method_content.content.sub_title}</h3>
+                                        <p className={styles['method__grid-detail-content']}>
+                                            {method_content.content.description_1}
                                         </p>
-                                        <p className={styles['promo__grid-detail-content']}>
-                                            <span className={styles['promo__grid-detail-about']}>Sĩ số: </span>
-                                            {promo_content.content.description_2}
-                                        </p>
-                                        <p className={styles['promo__grid-detail-content']}>
-                                            <span className={styles['promo__grid-detail-about']}>Vai trò của gia đình: </span>
-                                            {promo_content.content.description_3}
-                                            </p>
-                                        <a href={promo_content.content.href} className={styles['promo__grid-detail-link']}>{promo_content.content.button}</a>
                                     </CardContent>
                                 </WaveSection>
                             </div>

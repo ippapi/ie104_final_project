@@ -104,17 +104,17 @@
     color: var(--white-color);
 }
 
-.promo-block-1, .promo-block-2{
+.promo__block-1, .promo__block-2{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.promo-block-1 {
+.promo__block-1 {
     background-color: var(--background-one);
 }
 
-.promo-block-2 {
+.promo__block-2 {
     background-color: var(--background-two);
 }
 
@@ -238,3 +238,4 @@
     text-align: center;
     line-height: 1.5em;
 }
+

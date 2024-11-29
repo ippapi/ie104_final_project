@@ -123,25 +123,25 @@ const character_info_1 = [
     {
         title: 'Mysteries 1',
         discription: 'Tiếng anh cho trẻ 13 tuổi',
-        href: '#promo_1',
+        href: '#promo__1',
         img: '/course13_18/kid_1.png'
     },
     {
         title: 'Mysteries 2',
         discription: 'Tiếng anh cho trẻ 14 tuổi',
-        href: '#promo_2',
+        href: '#promo__2',
         img: '/course13_18/kid_2.png'
     },
     {
         title: 'The Future 1',
         discription: 'Tiếng Anh cho thiếu niên 15 tuổi ',
-        href: '#promo_3',
+        href: '#promo__3',
         img: '/course13_18/kid_3.png'
     },
     {
         title: 'MThe Future 2',
         discription: 'Tiếng Anh cho thiếu niên 16 tuổi',
-        href: '#promo_4',
+        href: '#promo__4',
         img: '/course13_18/kid_4.png'
     }
 ]
@@ -150,13 +150,13 @@ const character_info_2 = [
     {
         title: 'Subscription 1',
         discription: 'Tiếng Anh cho thiếu niên 17 tuổi ',
-        href: '#promo_5',
+        href: '#promo__5',
         img: '/course13_18/kid_5.png'
     },
     {
         title: 'Subscription 2',
         discription: 'Tiếng Anh cho thiếu niên 18 tuổi ',
-        href: '#promo_6',
+        href: '#promo__6',
         img: '/course13_18/kid_6.png'
     }
 ]
@@ -190,7 +190,7 @@ const Main = () => {
                 {promo_contents.map((promo_content, index) => {
                     return ( 
                         <WaveSection direction='none'>
-                            <div className={styles[`promo-block-${2 - (index + 1) % 2}`]} id={`promo_${index + 1}`}>
+                            <div className={styles[`promo__block-${2 - (index + 1) % 2}`]} id={`promo__${index + 1}`}>
                                 <WaveSection direction={index % 2 == 0 ? 'right' : 'left'}>
                                     <CardContent img={promo_content.img} style={promo_content.style}>
                                         <h3 className={styles['promo__grid-detail-title']}>{promo_content.content.title}</h3>

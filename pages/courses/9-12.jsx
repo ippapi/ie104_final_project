@@ -97,25 +97,25 @@ const character_info = [
     {
         title: 'Animal Planet 1',
         discription: 'Tiếng anh cho trẻ 9 tuổi',
-        href: '#promo_1',
+        href: '#promo__1',
         img: '/course9_12/kid_1.png'
     },
     {
         title: 'Animal Planet 2',
         discription: 'Tiếng anh cho trẻ 10 tuổi',
-        href: '#promo_2',
+        href: '#promo__2',
         img: '/course9_12/kid_2.png'
     },
     {
         title: 'Fairy Tales 1',
         discription: 'Tiếng anh cho trẻ 11 tuổi',
-        href: '#promo_3',
+        href: '#promo__3',
         img: '/course9_12/kid_3.png'
     },
     {
         title: 'Fairy Tales 2',
         discription: 'Tiếng anh cho trẻ 12 tuổi',
-        href: '#promo_4',
+        href: '#promo__4',
         img: '/course9_12/kid_4.png'
     }
 ]
@@ -144,7 +144,7 @@ const Main = () => {
                 {promo_contents.map((promo_content, index) => {
                     return ( 
                         <WaveSection direction='none'>
-                            <div className={styles[`promo-block-${2 - (index + 1) % 2}`]} id={`promo_${index + 1}`}>
+                            <div className={styles[`promo__block-${2 - (index + 1) % 2}`]} id={`promo__${index + 1}`}>
                                 <WaveSection direction={index % 2 == 0 ? 'right' : 'left'}>
                                     <CardContent img={promo_content.img} style={promo_content.style}>
                                         <h3 className={styles['promo__grid-detail-title']}>{promo_content.content.title}</h3>
