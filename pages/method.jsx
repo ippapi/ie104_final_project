@@ -6,7 +6,7 @@ import Slideshow from '@/components/ui/SlideShow';
 import CardContent from '@/components/ui/CardContent';
 import RegistrationForm from '@/components/ui/RegisForm';
 import HelpButton from '@/components/ui/HelpButton';
-import VideoPlayer from '@/components/ui/VideoPlayer';
+import QuestionList from '@/components/ui/QuestionList';
 import CharacterShow from '@/components/ui/CharacterShow';
 
 const big_slide_images = [
@@ -24,7 +24,7 @@ const method_contents = [
             href: "#page__regis",
         },
         style: {
-            effect: "bounce",
+            effect: "scalezoom",
             width: "60vw",
             height: "25vw",
             img_pos: 'left',
@@ -40,7 +40,7 @@ const method_contents = [
             href: "#page__regis",
         },
         style: {
-            effect: "bounce",
+            effect: "scalezoom",
             width: "60vw",
             height: "25vw",
             img_pos: 'right', 
@@ -56,7 +56,7 @@ const method_contents = [
             href: "#page__regis",
         },
         style: {
-            effect: "bounce",
+            effect: "scalezoom",
             width: "60vw",
             height: "25vw",
             img_pos: 'left', 
@@ -72,7 +72,7 @@ const method_contents = [
             href: "#page__regis",
         },
         style: {
-            effect: "bounce",
+            effect: "scalezoom",
             width: "60vw",
             height: "25vw",
             img_pos: 'right', 
@@ -88,7 +88,7 @@ const method_contents = [
             href: "#page__regis",
         },
         style: {
-            effect: "bounce",
+            effect: "scalezoom",
             width: "60vw",
             height: "25vw",
             img_pos: 'left', 
@@ -97,10 +97,10 @@ const method_contents = [
     },
 ]
 
-const character_info = [
+const method_info = [
     {
         title: 'Nghe',
-        href: '#method_1',
+        href: '#method__1',
         img: '/method/nghe.png'
     },
     {
@@ -108,7 +108,7 @@ const character_info = [
     },
     {
         title: 'Hiểu',
-        href: '#method_2',
+        href: '#method__2',
         img: '/method/hieu.png'
     },
     {
@@ -116,7 +116,7 @@ const character_info = [
     },
     {
         title: 'Nói',
-        href: '#method_2',
+        href: '#method__2',
         img: '/method/noi.png'
     },
     {
@@ -124,7 +124,7 @@ const character_info = [
     },
     {
         title: 'Đọc',
-        href: '#method_2',
+        href: '#method__2',
         img: '/method/doc.png'
     },
     {
@@ -132,18 +132,65 @@ const character_info = [
     },
     {
         title: 'Viết',
-        href: '#method_2',
+        href: '#method__2',
         img: '/method/viet.png'
     },
 ]
 
-const character_style = {
+const method_style = {
     color: '#1e4b75',
     effect: 'border',
     gap: '30px',
     width: '60px', 
     height: '60px'
 }
+
+const base_info = [
+    {
+        href: '#',
+        img: '/method/base_1.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_2.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_3.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_4.png'
+    },
+]
+
+const base_info_1 = [
+    {
+        href: '#',
+        img: '/method/base_5.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_5.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_7.png'
+    },
+    {
+        href: '#',
+        img: '/method/base_8.png'
+    },
+]
+
+const base_style = {
+    color: 'var(--white-color)',
+    effect: 'scalezoom',
+    gap: '50px',
+    width: '300px', 
+    height: '230px'
+}
+
 
 const Main = () => {
     return (
@@ -159,10 +206,18 @@ const Main = () => {
                         </p>
 
                         <WaveSection>
-                            <CharacterShow contents={character_info}  style={character_style} />
+                            <CharacterShow contents={method_info}  style={method_style} />
                         </WaveSection>
 
                     </div>
+                </section>
+            </WaveSection>
+
+            <WaveSection>
+                <section className={`${styles['page']} ${styles['page-red']}`}>
+                    <p className={styles['page__description-pink']}>
+                        Với phương pháp của Kids&Us, sự đồng hành của cha mẹ đóng vai trò rất quan trọng trong quá trình học tiếng Anh của trẻ.
+                    </p>
                 </section>
             </WaveSection>
 
@@ -170,11 +225,11 @@ const Main = () => {
                 {method_contents.map((method_content, index) => {
                     return ( 
                         <WaveSection>
-                            <div className={styles[`method__block-${2 - (index + 1) % 2}`]} id={`method__${2 - (index + 1) % 2}`}>
+                            <div className={styles[`method__block-${index + 1}`]} id={`method__${index + 1}`}>
                                 <WaveSection direction={index % 2 == 0 ? 'right' : 'left'}>
                                     <CardContent img={method_content.img} style={method_content.style}>
                                         <h3 className={styles['method__grid-detail-title']}>{method_content.content.title}</h3>
-                                        <h3 className={styles['method__grid-detail-sub-title']}>{method_content.content.sub_title}</h3>
+                                        <h3 className={styles[`method__grid-detail-sub-title-${index + 1}`]}>{method_content.content.sub_title}</h3>
                                         <p className={styles['method__grid-detail-content']}>
                                             {method_content.content.description_1}
                                         </p>
@@ -187,11 +242,15 @@ const Main = () => {
             </section>
 
             <WaveSection>
-                <section className={styles['page']}>
-                    <h2 className={styles['page__title']}>Trường Anh ngữ Kids&Us Vietnam - Tiếng Anh cho trẻ từ 1 tuổi </h2>
-                    <div className={styles['page__video-grid']}>
-                        <VideoPlayer videoId='OzEF9ml8HNU'/>
-                        <VideoPlayer videoId='jAU-CsRN1PQ'/>
+                <section className={`${styles['page']} ${styles['page-black']}`}>
+                    <div className={styles['page__content']}>
+                        <h2 className={`${styles['page__title']} ${styles['page__title-white']}`}>Phương pháp của chúng tôi</h2>
+
+                        <WaveSection>
+                            <CharacterShow contents={base_info}  style={base_style} />
+                            <CharacterShow contents={base_info_1}  style={base_style} />
+                        </WaveSection>
+
                     </div>
                 </section>
             </WaveSection>
@@ -199,6 +258,19 @@ const Main = () => {
             <WaveSection>
                 <section id='page__regis'>
                     <RegistrationForm bg_color="#58d2dd" />
+                </section>
+            </WaveSection>
+
+            <WaveSection>
+                <section className={styles['page']}>
+                    <div className={styles['page__content']}>
+                        <h2 className={`${styles['page__title']} ${styles['page__title-black']}`}>Những câu hỏi thường gặp về <span>Kids&Us</span></h2>
+
+                        <WaveSection>
+                            <QuestionList questions={[{title: '1', answer: 'i am a chill guy'}, {title: '1', answer: 'i am a chill guy'}]} />
+                        </WaveSection>
+
+                    </div>
                 </section>
             </WaveSection>
 
