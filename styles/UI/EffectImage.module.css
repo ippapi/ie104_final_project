@@ -1,9 +1,13 @@
 .effect-image {
-    transition: transform 0.8s ease, filter 0.8s ease;
+    transition: transform 0.8s ease, filter 0.8s ease, ;
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.effect-image--float {
+    transition: transform 0.7s linear;
 }
   
 .effect-image--zoom:hover {

@@ -14,10 +14,11 @@ const NavBar = () => {
         {
             label: "Các khóa học",
             dropdown: [
-              { name: "Tiếng anh cho trẻ 1-2 tuổi", link: "/courses/1-2" },
-              { name: "Tiếng anh cho trẻ 3-8 tuổi", link: "/courses/3-8" },
-              { name: "Tiếng anh cho trẻ 9-12 tuổi", link: "/courses/9-12" },
-              { name: "Tiếng anh cho trẻ 13-18 tuổi", link: "/courses/13-18" },
+                { name: "Học thử miễn phí", link: "/courses/trial" },
+                { name: "Tiếng anh cho trẻ 1-2 tuổi", link: "/courses/1-2" },
+                { name: "Tiếng anh cho trẻ 3-8 tuổi", link: "/courses/3-8" },
+                { name: "Tiếng anh cho trẻ 9-12 tuổi", link: "/courses/9-12" },
+                { name: "Tiếng anh cho trẻ 13-18 tuổi", link: "/courses/13-18" },
             ],
         },
         {

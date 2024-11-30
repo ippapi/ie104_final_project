@@ -11,7 +11,7 @@ import CharacterShow from '@/components/ui/CharacterShow';
 
 const big_slide_images = [
     "/method/slides/slide_1.png",
-    "/method/slides/slide_2.png"
+    "/method/slides/slide_2.png",
 ]
 
 const method_contents = [
@@ -191,6 +191,48 @@ const base_style = {
     height: '230px'
 }
 
+const questions = [
+    {
+        title: 'Học tiếng Anh với phương pháp của Kids&Us diễn ra như thế nào? ',
+        answer: 'Với khối lượng kiến thức vừa đủ và thú vị! Các lớp học của Kids&Us là sự kết hợp của kiến thức ngôn ngữ với các bài hát và trò chơi. Phương pháp Kids&Us được hiệu chỉnh tỉ mỉ để giúp việc học trở nên hiệu quả, năng động và đầy cảm hứng. Tất cả các hoạt động được thực hiện tại lớp học đều có mục đích giao tiếp và được thiết kế để củng cố nội dung và mục tiêu của mỗi khóa học. Trong phương pháp của chúng tôi, không có gì được thực hiện chỉ vì lợi ích riêng lẻ; mọi thứ đều có lý do!'
+    },
+    {
+        title: 'Kids&Us có những cấp độ nào? ',
+        answer: 'Tại Kids&Us, chúng tôi không phân biệt các cấp độ tiếng Anh, cũng như không có cấp độ nào khi tiếp thu tiếng mẹ đẻ. Chúng tôi sử dụng các câu chuyện và nhân vật phù hợp với từng lứa tuổi. Trong lớp học, các bé sẽ học được rằng môi trường xung quanh và những thứ chúng quen thuộc xung quanh đều có tên riêng bằng tiếng Anh. Với Linda, nhân vật dành cho bé 2 tuổi, trẻ sẽ thấy Linda ngừng mặc tã và bắt đầu tự đi vệ sinh. Tuy nhiên, đến Oliver (6 đến 7 tuổi) thì sẽ là câu chuyện khác về chiếc răng bị rụng. Điều này giúp dễ dàng khơi gợi sự quan tâm và tạo động lực cho trẻ.'
+    },
+    {
+        title: 'Một tuần có bao nhiêu lớp học? ',
+        answer: 'Từ một đến hai tuổi, bé sẽ tham gia một lớp học 45 phút mỗi tuần. Từ khi 3 tuổi cho đến khi bắt đầu biết đọc và viết, trẻ học một giờ một tuần. Và từ 8 tuổi, số giờ lên lớp mỗi tuần sẽ tăng dần lên 3 giờ một tuần, trải đều trong hai ngày. Tóm lại, đó là một thời lượng phù hợp và bền vững theo thời gian, phù hợp với lứa tuổi học sinh.'
+    },
+    {
+        title: 'Tại sao trẻ phải nghe một đoạn âm thanh mỗi ngày? ',
+        answer: 'Chúng tôi tin rằng việc tiếp xúc liên tục với ngôn ngữ là điều cần thiết cho việc học. Bằng cách nghe liên tục một đoạn âm thanh cụ thể, trẻ sẽ lưu giữ một số lượng lớn các từ và cấu trúc trong não bộ, để khi trẻ nghe thấy hoặc làm việc với chúng, trẻ sẽ dễ dàng hiểu và vận dụng hơn. Có thể nói, tầm quan trọng của kỹ năng nghe là vô cùng lớn, nó giúp trẻ quen dần với việc hiểu và phát âm tiếng Anh. Các bản nhạc này sẽ kéo dài khoảng mười phút. Trẻ có thể được nghe bất cứ lúc nào và trong bất kỳ hoạt động nào, miễn là không xem Tivi hoặc bất kỳ loại kích thích nghe nhìn nào khác có thể làm các trẻ mất tập trung. Về vấn đề này, điều quan trọng là phải tìm thời gian để cho trẻ lắng nghe hàng ngày, tích hợp thói quen này như một một hoạt động quen thuộc trong ngày (vào bữa sáng, trước khi đi ngủ, v.v.). Nếu trẻ không nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu quả hơn. Điều này là do các lớp học được lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng mà trẻ đã quen thuộc, vì vậy nếu trẻ không nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp khó khăn khi đến lớp học, và hậu quả lâu dài là trẻ sẽ mất động lực'
+    },
+    {
+        title: 'Điều gì sẽ xảy ra nếu một đứa trẻ không nghe đoạn âm thanh mỗi ngày? ',
+        answer: 'Nếu trẻ không nghe đoạn âm thanh thì phương pháp này trở nên kém hiệu quả hơn. Điều này là do các lớp học được lên kế hoạch xoay quanh các hoạt động sử dụng từ vựng mà trẻ đã quen thuộc, vì vậy nếu trẻ không nghe đoạn âm thanh thì có nhiều khả năng chúng sẽ gặp khó khăn khi đến lớp học, và hậu quả lâu dài là trẻ sẽ mất động lực'
+    },
+    {
+        title: 'Gia đình có cần biết tiếng Anh không? ',
+        answer: 'Không. Điều này là không cần thiết! Gia đình luôn là sự hỗ trợ tốt nhất cho con học tiếng Anh, bằng cách thể hiện sự quan tâm và nhiệt tình với những gì con đang học. Với sự hỗ trợ tinh thần của bạn, ba mẹ đã đóng góp rất nhiều vào sự thành công của quá trình học tập.'
+    },
+    {
+        title: 'Ba mẹ có phải ở trong lớp học không? ',
+        answer: 'Điều này chỉ cần thiết trong những năm đầu tiên của phương pháp này (1 và 2 tuổi). Sự hiện diện của ba mẹ làm cho trẻ cảm thấy an toàn và thoải mái trong môi trường mới và từ đó, trẻ bắt đầu kết nối cảm xúc với ngôn ngữ, tạo ra một mối liên kết rất đặc biệt để học tập hiệu quả hơn Khi ba mẹ ngừng tham gia lớp học cùng con, ba mẹ nên đảm bảo rằng con sẽ nghe các file âm thanh của Kids&Us ở nhà hàng ngày và thực hiện các hoạt động bổ sung mà chúng tôi đề xuất.'
+    },
+    {
+        title: 'Trẻ có học những điều giống như ở trường không? ',
+        answer: 'Tại Kids&Us, chương trình học của chúng tôi không khác với những gì trẻ học ở trường. Phương pháp của chúng tôi dựa trên sự đắm chìm hoàn toàn vào ngôn ngữ và khả năng tiếp thu ngôn ngữ toàn diện. Cấu trúc ngữ pháp và từ vựng không thể được học một cách độc lập mà phải học trong ngữ cảnh thực tế. Hơn nữa, chúng tôi tận dụng lợi thế của các lớp học nhóm nhỏ để thúc đẩy và cung cấp nhiều cơ hội hơn giao tiếp hơn.'
+    },
+    {
+        title: 'Tại sao các em bắt đầu biết đọc và viết muộn hơn ở trường tiểu học? ',
+        answer: 'Vấn đề không phải là bắt đầu muộn mà là bắt đầu khi trẻ đã thực sự sẵn sàng. Trong thực tế, với tiếng mẹ đẻ của chúng ta, chúng ta không bắt đầu nói, đọc và viết đồng thời, mà trước tiên chúng ta học nghe ngôn ngữ và sau đó mới học đọc và viết. Vì vậy, chúng tôi tin rằng việc thúc đẩy nghe và nói trong những năm đầu tiên học tiếng Anh và giới thiệu kỹ năng đọc và viết sau này sẽ trở nên tự nhiên và hiệu quả hơn.'
+    },
+    {
+        title: 'Tại sao ba mẹ nên đăng ký cho con tham gia Kids&Us? ',
+        answer: 'Bởi vì phương pháp của chúng tôi hiệu quả nên con bạn sẽ học tiếng Anh với chúng tôi, giống như 150.000 học sinh khác theo học tại 500 trường ở 9 quốc gia khác nhau. Là người đi đầu trong việc dạy tiếng Anh cho trẻ em ở Tây Ban Nha, chúng tôi tin tưởng vào sự cải tiến và đổi mới liên tục. Chúng tôi là tổ chức hàng đầu trong lĩnh vực này nhờ vào phương pháp hiệu quả đã được kiểm chứng.'
+    },
+]
 
 const Main = () => {
     return (
@@ -214,8 +256,8 @@ const Main = () => {
             </WaveSection>
 
             <WaveSection>
-                <section className={`${styles['page']} ${styles['page-red']}`}>
-                    <p className={styles['page__description-pink']}>
+                <section className={`${styles['page']} ${styles['page--red']}`}>
+                    <p className={styles['page__description--pink']}>
                         Với phương pháp của Kids&Us, sự đồng hành của cha mẹ đóng vai trò rất quan trọng trong quá trình học tiếng Anh của trẻ.
                     </p>
                 </section>
@@ -242,9 +284,9 @@ const Main = () => {
             </section>
 
             <WaveSection>
-                <section className={`${styles['page']} ${styles['page-black']}`}>
+                <section className={`${styles['page']} ${styles['page--black']}`}>
                     <div className={styles['page__content']}>
-                        <h2 className={`${styles['page__title']} ${styles['page__title-white']}`}>Phương pháp của chúng tôi</h2>
+                        <h2 className={`${styles['page__title']} ${styles['page__title--white']}`}>Phương pháp của chúng tôi</h2>
 
                         <WaveSection>
                             <CharacterShow contents={base_info}  style={base_style} />
@@ -264,10 +306,10 @@ const Main = () => {
             <WaveSection>
                 <section className={styles['page']}>
                     <div className={styles['page__content']}>
-                        <h2 className={`${styles['page__title']} ${styles['page__title-black']}`}>Những câu hỏi thường gặp về <span>Kids&Us</span></h2>
+                        <h2 className={`${styles['page__title']} ${styles['page__title--black']}`}>Những câu hỏi thường gặp về <span>Kids&Us</span></h2>
 
                         <WaveSection>
-                            <QuestionList questions={[{title: '1', answer: 'i am a chill guy'}, {title: '1', answer: 'i am a chill guy'}]} />
+                            <QuestionList questions={questions} />
                         </WaveSection>
 
                     </div>

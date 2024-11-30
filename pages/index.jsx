@@ -149,7 +149,7 @@ const Main = () => {
                 </section>
             </WaveSection>
             <WaveSection>
-                <section className={`${styles['page']} ${styles['page-pink']}`}>
+                <section className={`${styles['page']} ${styles['page--pink']}`}>
                     <div>
                         <h2 className={styles['page__title']}>Phương pháp học tiếng Anh</h2>
                         <p className={styles['page__description']}>Phương pháp học tiếng Anh tại Kids&Us được dựa theo quá trình hấp thu tiếng mẹ đẻ - một hành trình học tập vừa logic, vừa tự nhiên, nhưng cũng đầy ngẫu hứng.</p>

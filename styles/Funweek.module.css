@@ -1,0 +1,269 @@
+.fw__bigimage {
+    width: 100%;
+}
+
+.fw__intro {
+    height: auto;
+    position: relative;
+    margin-bottom: 600px;
+}
+
+.intro img{
+    display: block;
+    margin-left: auto;
+    padding: 60px;
+    object-fit: cover;
+    width: 44%;
+    height: auto;
+}
+
+.intro__overlay h1 {
+    position: absolute; 
+    top: 32%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    color:  var(--hover-color); 
+    font-size: 36px;
+    font-weight: bold; 
+    line-height: 1.5;
+    letter-spacing:1px;
+}
+
+.intro__overlay p {
+    position: absolute; 
+    top: 50%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    color: var(--text-color); 
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing:1px;
+    text-align: center;
+    width: 51%;
+}
+
+.intro__overlay a {
+    position: absolute; 
+    top: 68%; 
+    left: 32%;
+    transform: translate(-50%, -50%); 
+    padding: 16px 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    color:white;
+    background-color: #f17229;
+    font-size: 16px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.intro__overlay a:hover {
+    background-color: var(--hover-color);
+}
+
+.intro__overlay-img {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 86%; 
+    height: auto; 
+    top:80%;
+    z-index: 1;
+}
+
+.fw__clear{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.fw__info{
+    float: left; 
+    width: 44%; 
+    margin-left: 110px;
+}
+
+.fw__info h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 110px;
+    margin-bottom: 30px;
+}
+
+.fw__info ul {
+    list-style-type: disc;
+    font-size: 17px; 
+    line-height: 2;
+    margin-left: 40px;
+}
+
+.fw__info-img {
+    float: right; 
+    width: 50%; 
+    display: flex;          
+    justify-content: center; 
+    align-items: center;
+}
+
+.fw__info-img img {
+    max-width: 100%;     
+    height: auto;
+}
+
+.fw__grid{
+    margin: 50px auto;
+    background-color:#353535;
+    color: white;
+    padding: 20px;
+    text-align: center; 
+}
+
+.fw__grid--white {
+    background-color: white;
+    color: black;
+}
+
+.fw__grid h1{
+    font-weight: bold;
+    font-size: 34px;
+    margin: 40px auto;
+    max-width: 34%;
+    line-height: 1.4;
+}
+
+.fw__grid--white h1 {
+    font-weight: bold;
+    font-size: 34px;
+    margin: 40px auto;
+    max-width: 34%;
+    line-height: 1.4;
+}
+
+
+.fw__grid > .grid{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.fw__grid > .grid > .grid__item{
+    width: 360px;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fw__grid > .grid > .grid__item img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+.fw__grid > .grid > .grid__item p {
+    font-size: 16px;
+    margin: 20px 15px;
+    line-height: 1.7;
+}
+
+.fw__grid > .grid__submit {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.fw__grid > .grid__submit > .submit__button{
+    margin: auto;
+    border-radius: 50px;
+    border: 2px solid #f17229;
+    background-color: transparent;
+    color: #f17229;
+    font-size: 16px;
+    padding: 16px 30px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.fw__grid > .grid__submit > .submit__button:hover{
+    background-color:#f17229;
+    color: white;
+}
+
+.fw__grid--white > .grid > .grid__item{
+    color:#485052;
+    width: 380px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fw__grid--white > .grid > .grid__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.fw__grid--white > .grid > .grid__item p {
+    color:#485052;
+    text-align: left;
+    font-size: 16px;
+    margin: 30px 20px 80px 36px;
+    line-height: 1.6;
+}
+
+.fw__grid--white > .grid > .grid__item h3 {
+    color:black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 36px;
+    margin-top: -50px;
+}
+
+.fw__grid--white > .grid > .grid__item h3 span{
+    color:#485052;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.fw__register{
+    background-color:#332F2C;
+    height: auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.form__header {
+    position: relative; 
+    z-index: 1;
+  }
+
+.form__header img{
+    display: block;
+    margin-left: auto;
+    object-fit: cover;
+    width: 36%;
+    height: auto;
+    margin-right: 200px;
+}
+
+.form__title img{
+    position: absolute;
+    left: 26%; 
+    transform: translateX(-50%); 
+    width: 36%; 
+    height: auto; 
+    top:34%;
+}
+
+.form__title p{
+    position: absolute;
+    left: 26%; 
+    top:56%;
+    transform: translateX(-50%); 
+    color:white; 
+    font-size: 16px;
+}
