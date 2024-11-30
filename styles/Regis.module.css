@@ -1,0 +1,40 @@
+.grid {
+    display: flex;
+    gap: 50px;
+    margin-top: 36px;
+}
+
+.grid__contact {
+    width: 35%; 
+    margin-left: 64px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.grid__contact h1{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.grid__contact-info {
+    display: flex; 
+    align-items: center;
+    margin-top: 36px; 
+    margin-bottom: 48px;
+}
+
+.grid__contact-info img {
+    max-width: 10%; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.grid__contact-info p {
+    font-size: 17px; 
+    line-height: 1.8;
+    color: #948d84;
+}
+
+.grid__contact-info p span {
+    color: #f27240; 
+}

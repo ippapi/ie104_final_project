@@ -90,7 +90,7 @@ const NavBar = () => {
                     )
                 )}
 
-                <a href="/dang-ky" className={styles['nav__menu-button']}>Đăng Ký</a>
+                <a href="/regis" className={styles['nav__menu-button']}>Đăng Ký</a>
             </div>
         </nav>);
 };
